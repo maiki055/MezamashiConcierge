@@ -1,0 +1,6 @@
+framework module Pods_MezamashiConciergeTests {
+  umbrella header "Pods-MezamashiConciergeTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

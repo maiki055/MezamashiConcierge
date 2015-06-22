@@ -14,6 +14,7 @@
 		32858CEF1B386EEE007723A7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32858CEE1B386EEE007723A7 /* Images.xcassets */; };
 		32858CF21B386EEE007723A7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32858CF01B386EEE007723A7 /* LaunchScreen.xib */; };
 		32858CFE1B386EEE007723A7 /* MezamashiConciergeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32858CFD1B386EEE007723A7 /* MezamashiConciergeTests.swift */; };
+		8C21BD98B05C8AD257D22B6B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49CD9A7F46E3BCBA4ACA2241 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,9 @@
 		32858CF71B386EEE007723A7 /* MezamashiConciergeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MezamashiConciergeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32858CFC1B386EEE007723A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32858CFD1B386EEE007723A7 /* MezamashiConciergeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MezamashiConciergeTests.swift; sourceTree = "<group>"; };
+		49CD9A7F46E3BCBA4ACA2241 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9360F5B5564FBF05A3BE4B23 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C787405927E3D16A9F52FF10 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C21BD98B05C8AD257D22B6B /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +69,8 @@
 				32858CE11B386EEE007723A7 /* MezamashiConcierge */,
 				32858CFA1B386EEE007723A7 /* MezamashiConciergeTests */,
 				32858CE01B386EEE007723A7 /* Products */,
+				76A76D9C3C4631DE26842005 /* Pods */,
+				7A0D0DA2301E63FFD6A7A811 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +122,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		76A76D9C3C4631DE26842005 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C787405927E3D16A9F52FF10 /* Pods.debug.xcconfig */,
+				9360F5B5564FBF05A3BE4B23 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7A0D0DA2301E63FFD6A7A811 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49CD9A7F46E3BCBA4ACA2241 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,9 +146,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 32858D011B386EEE007723A7 /* Build configuration list for PBXNativeTarget "MezamashiConcierge" */;
 			buildPhases = (
+				3DB4E3C001C642CC1B01A7D6 /* Check Pods Manifest.lock */,
 				32858CDB1B386EEE007723A7 /* Sources */,
 				32858CDC1B386EEE007723A7 /* Frameworks */,
 				32858CDD1B386EEE007723A7 /* Resources */,
+				DEEE5989974E0EDC2EC866A6 /* Embed Pods Frameworks */,
+				2E04AC0A1071AB15EE46F1AC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -209,6 +236,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2E04AC0A1071AB15EE46F1AC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3DB4E3C001C642CC1B01A7D6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DEEE5989974E0EDC2EC866A6 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		32858CDB1B386EEE007723A7 /* Sources */ = {
@@ -342,6 +417,7 @@
 		};
 		32858D021B386EEE007723A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C787405927E3D16A9F52FF10 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MezamashiConcierge/Info.plist;
@@ -352,6 +428,7 @@
 		};
 		32858D031B386EEE007723A7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9360F5B5564FBF05A3BE4B23 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MezamashiConcierge/Info.plist;
@@ -413,6 +490,7 @@
 				32858D031B386EEE007723A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		32858D041B386EEE007723A7 /* Build configuration list for PBXNativeTarget "MezamashiConciergeTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +499,7 @@
 				32858D061B386EEE007723A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
