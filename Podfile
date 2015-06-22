@@ -2,10 +2,9 @@
 # platform :ios, ‘8.0’
 use_frameworks!
 
-pod 'Alamofire', '~> 1.2.0'
-
 target 'MezamashiConcierge' do
-
+    pod 'Alamofire', '~> 1.2.0'
+    pod 'SwiftyJSON', '~> 2.2.0'
 end
 
 target 'MezamashiConciergeTests' do

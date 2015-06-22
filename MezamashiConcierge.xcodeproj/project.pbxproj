@@ -14,6 +14,7 @@
 		32858CEF1B386EEE007723A7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32858CEE1B386EEE007723A7 /* Images.xcassets */; };
 		32858CF21B386EEE007723A7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32858CF01B386EEE007723A7 /* LaunchScreen.xib */; };
 		32858CFE1B386EEE007723A7 /* MezamashiConciergeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32858CFD1B386EEE007723A7 /* MezamashiConciergeTests.swift */; };
+		4CAA33ABCF0D176CA04D9771 /* Pods_MezamashiConcierge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303844DC96B8BE51BDCC30A5 /* Pods_MezamashiConcierge.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		8C21BD98B05C8AD257D22B6B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49CD9A7F46E3BCBA4ACA2241 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		303844DC96B8BE51BDCC30A5 /* Pods_MezamashiConcierge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MezamashiConcierge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32858CDF1B386EEE007723A7 /* MezamashiConcierge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MezamashiConcierge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32858CE31B386EEE007723A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32858CE41B386EEE007723A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C21BD98B05C8AD257D22B6B /* Pods.framework in Frameworks */,
+				4CAA33ABCF0D176CA04D9771 /* Pods_MezamashiConcierge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				49CD9A7F46E3BCBA4ACA2241 /* Pods.framework */,
+				303844DC96B8BE51BDCC30A5 /* Pods_MezamashiConcierge.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -250,7 +254,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MezamashiConcierge/Pods-MezamashiConcierge-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3DB4E3C001C642CC1B01A7D6 /* Check Pods Manifest.lock */ = {
@@ -280,7 +284,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MezamashiConcierge/Pods-MezamashiConcierge-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
