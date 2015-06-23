@@ -15,4 +15,10 @@ extension UIFont {
     class func boldFont(fontSize: CGFloat) -> UIFont {
         return UIFont(name: "HiraKakuProN-W6", size: fontSize)!
     }
+    class func alphanumericFont(fontSize: CGFloat) -> UIFont {
+        return UIFont(name: "HelveticaNeue-Thin", size: fontSize)!
+    }
+    class func alphanumericBoldFont(fontSize: CGFloat) -> UIFont {
+        return UIFont(name: "HelveticaNeue", size: fontSize)!
+    }
 }
