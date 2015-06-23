@@ -9,10 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var alarmView: AlarmView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.mainColor()
+        
+        alarmView = AlarmView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.width))
+        self.view.addSubview(alarmView)
     }
 
     override func didReceiveMemoryWarning() {
