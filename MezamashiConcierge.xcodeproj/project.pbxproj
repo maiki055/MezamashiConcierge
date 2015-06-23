@@ -14,6 +14,7 @@
 		32858CEF1B386EEE007723A7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32858CEE1B386EEE007723A7 /* Images.xcassets */; };
 		32858CF21B386EEE007723A7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32858CF01B386EEE007723A7 /* LaunchScreen.xib */; };
 		32858CFE1B386EEE007723A7 /* MezamashiConciergeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32858CFD1B386EEE007723A7 /* MezamashiConciergeTests.swift */; };
+		32858D0D1B38F871007723A7 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32858D0C1B38F871007723A7 /* UIColor+Extension.swift */; };
 		4CAA33ABCF0D176CA04D9771 /* Pods_MezamashiConcierge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303844DC96B8BE51BDCC30A5 /* Pods_MezamashiConcierge.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		8C21BD98B05C8AD257D22B6B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49CD9A7F46E3BCBA4ACA2241 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -41,6 +42,7 @@
 		32858CF71B386EEE007723A7 /* MezamashiConciergeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MezamashiConciergeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32858CFC1B386EEE007723A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32858CFD1B386EEE007723A7 /* MezamashiConciergeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MezamashiConciergeTests.swift; sourceTree = "<group>"; };
+		32858D0C1B38F871007723A7 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		49CD9A7F46E3BCBA4ACA2241 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9360F5B5564FBF05A3BE4B23 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C787405927E3D16A9F52FF10 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 		32858D0B1B38F604007723A7 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				32858D0C1B38F871007723A7 /* UIColor+Extension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				32858CEA1B386EEE007723A7 /* ViewController.swift in Sources */,
 				32858CE51B386EEE007723A7 /* AppDelegate.swift in Sources */,
 				32858CE81B386EEE007723A7 /* MezamashiConcierge.xcdatamodeld in Sources */,
+				32858D0D1B38F871007723A7 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
