@@ -18,12 +18,12 @@ class ClockView: UIView {
         
         backgroundColor = UIColor.clearColor()
         dateFormatter.locale = NSLocale(localeIdentifier: "en_US")
-        dateFormatter.dateFormat = "HH:mm:ss"
+        dateFormatter.dateFormat = "HH:mm"
         
         clockLabel.frame.size = CGSize(width: frame.width, height: frame.height)
         clockLabel.center = center
-        clockLabel.font = UIFont.alphanumericFont(40)
-        clockLabel.textColor = UIColor.subColor02()
+        clockLabel.font = UIFont.alphanumericFont(60)
+        clockLabel.textColor = UIColor.subColor01()
         clockLabel.textAlignment = NSTextAlignment.Center
         self.addSubview(clockLabel)
     }
@@ -34,6 +34,17 @@ class ClockView: UIView {
 
     override func drawRect(rect: CGRect) {
         clockLabel.text = dateFormatter.stringFromDate(date)
+        
+        let radius = self.frame.height * (1/4)
+        let clockwise = true
+        let startAngle = 3 * M_PI / 2
+        let endAngle = 3 * M_PI / 2 + 2 * M_PI
+        
+        let path = UIBezierPath(arcCenter: center, radius: radius,  startAngle: CGFloat(startAngle), endAngle: CGFloat(endAngle), clockwise: clockwise)
+        path.lineWidth = 10
+        UIColor.color(decRed: 73, decGreen: 184, decBlue: 232, alpha: 1).setStroke()
+        
+        path.stroke()
     }
 
 }
