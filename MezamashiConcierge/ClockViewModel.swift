@@ -11,9 +11,9 @@ import UIKit
 class ClockViewModel: NSObject {
     let calendar = NSCalendar(identifier: NSCalendarIdentifierGregorian)!
     var comps = (0, 0, 0, 0)
-    let dayhours: Float   = 24
-    let dayMinutes: Float = 24 * 60
-    let daySeconds: Float = 24 * 60 * 60
+    let fullhours: Float   = 24
+    let fullMinutes: Float = 60
+    let fullSeconds: Float = 60
     
     var date: NSDate = NSDate() {
         didSet {
@@ -25,11 +25,15 @@ class ClockViewModel: NSObject {
         calendar.getHour(&comps.0, minute: &comps.1, second: &comps.2, nanosecond: &comps.3, fromDate: date)
     }
     
-    func shorthand() {
-        println(Float(comps.0) / dayhours)
+    func shorthand() -> Float {
+        return Float(comps.0) / fullhours
     }
     
-    func longhand() {
-        println(Float(comps.1) / dayMinutes)
+    func longhand() -> Float {
+        return Float(comps.1) / fullMinutes
+    }
+    
+    func secondhand() -> Float {
+        return Float(comps.2) / fullSeconds
     }
 }
