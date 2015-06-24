@@ -10,20 +10,23 @@ import UIKit
 
 class ClockView: UIView {
     let clockViewModel = ClockViewModel()
-    let dateFormatter = NSDateFormatter()
-    let clockLabel = UILabel()
+    let dateFormatterHour = NSDateFormatter()
+    let dateFormatterEra  = NSDateFormatter()
+    let timeLabel = UILabel()
+    let dayLabel  = UILabel()
     // for draw
     let startAngle = 3 * M_PI / 2
-    let hourLineWidth: CGFloat = 10
-    let minuteLineWidth: CGFloat = 5
+    let hourLineWidth: CGFloat    = 10
+    let minuteLineWidth: CGFloat  = 5
     let secoundLineWidth: CGFloat = 2
-    let color = UIColor.color(decRed: 73, decGreen: 184, decBlue: 232, alpha: 1)
+    let color     = UIColor.color(decRed: 73, decGreen: 184, decBlue: 232, alpha: 1)
     let baseColor = UIColor.color(decRed: 73, decGreen: 184, decBlue: 232, alpha: 0.5)
     
     var date: NSDate = NSDate() {
         didSet {
             clockViewModel.date = date
-            clockLabel.text = dateFormatter.stringFromDate(date)
+            timeLabel.text = dateFormatterHour.stringFromDate(date)
+            dayLabel.text = dateFormatterEra.stringFromDate(date)
         }
     }
     
@@ -31,15 +34,29 @@ class ClockView: UIView {
         super.init(frame: frame)
         
         backgroundColor = UIColor.clearColor()
-        dateFormatter.locale = NSLocale(localeIdentifier: "en_US")
-        dateFormatter.dateFormat = "HH:mm"
+        dateFormatterHour.locale = NSLocale(localeIdentifier: "en_US")
+        dateFormatterHour.dateFormat = "HH:mm"
+        dateFormatterEra.locale = NSLocale(localeIdentifier: "en_US")
+        dateFormatterEra.dateFormat = "yyyy/mm/dd"
         
-        clockLabel.frame.size = CGSize(width: frame.width, height: frame.height)
-        clockLabel.center = center
-        clockLabel.font = UIFont.alphanumericFont(55)
-        clockLabel.textColor = UIColor.subColor01()
-        clockLabel.textAlignment = NSTextAlignment.Center
-        self.addSubview(clockLabel)
+        timeLabel.text = "00:00"
+        timeLabel.font = UIFont.alphanumericFont(55)
+        timeLabel.textColor = UIColor.subColor01()
+        timeLabel.sizeToFit()
+        timeLabel.center = center
+        
+        let lineView = UIView(frame: CGRect(x: timeLabel.frame.minX, y: timeLabel.frame.maxY - 20, width: timeLabel.frame.width, height: 1))
+        lineView.backgroundColor = UIColor.subColor01()
+        
+        dayLabel.text = "0000/00/00"
+        dayLabel.font = UIFont.alphanumericFont(20)
+        dayLabel.textColor = UIColor.subColor01()
+        dayLabel.sizeToFit()
+        dayLabel.center = CGPoint(x: center.x, y: lineView.frame.maxY + infoLabel.frame.height)
+        
+        self.addSubview(timeLabel)
+        self.addSubview(lineView)
+        self.addSubview(dayLabel)
     }
 
     required init(coder aDecoder: NSCoder) {
