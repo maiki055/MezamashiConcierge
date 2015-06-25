@@ -10,13 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
     var alarmView: ClockView!
+    var messageView: MessageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.mainColor()
         
         alarmView = ClockView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.width))
+        messageView = MessageView(frame: CGRect(x: 0, y: alarmView.frame.maxY, width: self.view.frame.width, height: self.view.frame.height - alarmView.frame.maxY))
         self.view.addSubview(alarmView)
+        self.view.addSubview(messageView)
+        
         
         update()
         NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "update", userInfo: nil, repeats: true)
