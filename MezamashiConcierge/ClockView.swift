@@ -19,8 +19,8 @@ class ClockView: UIView {
     let hourLineWidth: CGFloat    = 10
     let minuteLineWidth: CGFloat  = 5
     let secoundLineWidth: CGFloat = 2
-    let color     = UIColor.color(decRed: 73, decGreen: 184, decBlue: 232, alpha: 1)
-    let baseColor = UIColor.color(decRed: 73, decGreen: 184, decBlue: 232, alpha: 0.5)
+    let color     = UIColor.color(decRed: 208, decGreen: 176, decBlue: 134, alpha: 1)
+    let baseColor = UIColor.color(decRed: 208, decGreen: 176, decBlue: 134, alpha: 0.5)
     
     var date: NSDate = NSDate() {
         didSet {
@@ -37,10 +37,11 @@ class ClockView: UIView {
         dateFormatterHour.locale = NSLocale(localeIdentifier: "en_US")
         dateFormatterHour.dateFormat = "HH:mm"
         dateFormatterEra.locale = NSLocale(localeIdentifier: "en_US")
-        dateFormatterEra.dateFormat = "yyyy/mm/dd"
+        dateFormatterEra.dateFormat = "yyyy/MM/dd"
         
         timeLabel.text = "00:00"
         timeLabel.font = UIFont.alphanumericFont(55)
+        timeLabel.textAlignment = NSTextAlignment.Center
         timeLabel.textColor = UIColor.subColor01()
         timeLabel.sizeToFit()
         timeLabel.center = center
@@ -49,10 +50,11 @@ class ClockView: UIView {
         lineView.backgroundColor = UIColor.subColor01()
         
         dayLabel.text = "0000/00/00"
+        dayLabel.textAlignment = NSTextAlignment.Center
         dayLabel.font = UIFont.alphanumericFont(20)
         dayLabel.textColor = UIColor.subColor01()
         dayLabel.sizeToFit()
-        dayLabel.center = CGPoint(x: center.x, y: lineView.frame.maxY + infoLabel.frame.height)
+        dayLabel.center = CGPoint(x: center.x, y: lineView.frame.maxY + dayLabel.frame.height)
         
         self.addSubview(timeLabel)
         self.addSubview(lineView)
@@ -86,7 +88,7 @@ class ClockView: UIView {
         path.lineWidth = lineWidth
         lineColor.setStroke()
         if isDash {
-            path.setLineDash([1.0, 5.0], count: 2, phase: 0)
+            path.setLineDash([1.0, 8.0], count: 2, phase: 0)
         }
         path.stroke()
     }
