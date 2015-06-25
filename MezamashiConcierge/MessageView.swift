@@ -8,8 +8,15 @@
 
 import UIKit
 
-class MessageView: UIView {
+@objc protocol MessageViewDelegate {
+    optional func messageView(messageView: MessageView, didSelectAlermButton button: UIButton)
+    optional func messageView(messageView: MessageView, didSelectLeaveButton button: UIButton)
+}
+
+class MessageView: UIView, UITableViewDelegate {
+    let messageViewModel = MessageViewModel()
     let underlineView = UIView()
+    weak var delegate: MessageViewDelegate?
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var jaMessageLabel: UILabel!
@@ -24,19 +31,27 @@ class MessageView: UIView {
         enMessageLabel.font = UIFont.alphanumericFont(20)
         enMessageLabel.textColor = UIColor.subColor01()
         
-//        enMessageLabel.text = "not setting alarm."
-        enMessageLabel.text = "setting alarm."
+        enMessageLabel.text = messageViewModel.enMessage
         enMessageLabel.sizeToFit()
         
         underlineView.backgroundColor = UIColor.subColor01()
         underlineView.frame = CGRectMake(0, enMessageLabel.frame.height - 4, enMessageLabel.frame.width, 0.3)
         underlineView.autoresizingMask = .FlexibleRightMargin | .FlexibleBottomMargin | .FlexibleLeftMargin
         
-//        jaMessageLabel.text = "アラームは設定されていません。"
-        jaMessageLabel.text = "明日の08:50にアラームが設定されています。"
+        jaMessageLabel.text = messageViewModel.jaMessage
         jaMessageLabel.font = UIFont.font(12)
         jaMessageLabel.textColor = UIColor.subColor01()
         
         enMessageLabel.addSubview(underlineView)
+    }
+    
+    // MARK: TouchEvent
+    
+    func didSelectAlermButton(sender: UIButton) {
+        self.delegate?.messageView?(self, didSelectAlermButton: sender)
+    }
+    
+    func didSelectLeaveButton(sender: UIButton) {
+        self.delegate?.messageView?(self, didSelectLeaveButton: sender)
     }
 }
