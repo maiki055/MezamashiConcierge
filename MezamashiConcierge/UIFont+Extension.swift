@@ -10,10 +10,10 @@ import UIKit
 
 extension UIFont {
     class func font(fontSize: CGFloat) -> UIFont {
-        return UIFont(name: "HiraKakuProN-W3", size: fontSize)!
+        return UIFont(name: "HiraMinProN-W3", size: fontSize)!
     }
     class func boldFont(fontSize: CGFloat) -> UIFont {
-        return UIFont(name: "HiraKakuProN-W6", size: fontSize)!
+        return UIFont(name: "HiraMinProN-W6", size: fontSize)!
     }
     class func alphanumericFont(fontSize: CGFloat) -> UIFont {
         return UIFont(name: "SavoyeLetPlain", size: fontSize)!
