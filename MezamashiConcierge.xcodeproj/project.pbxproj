@@ -25,6 +25,8 @@
 		32858D241B391D1C007723A7 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32858D231B391D1C007723A7 /* ClockView.swift */; };
 		32858D271B3AAEDE007723A7 /* ClockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32858D261B3AAEDE007723A7 /* ClockViewModel.swift */; };
 		32858D2D1B3AC8DC007723A7 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32858D2C1B3AC8DC007723A7 /* MessageView.swift */; };
+		32858D2F1B3BA302007723A7 /* MessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32858D2E1B3BA302007723A7 /* MessageView.xib */; };
+		32858D311B3BA500007723A7 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32858D301B3BA500007723A7 /* Button.swift */; };
 		4CAA33ABCF0D176CA04D9771 /* Pods_MezamashiConcierge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303844DC96B8BE51BDCC30A5 /* Pods_MezamashiConcierge.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		8C21BD98B05C8AD257D22B6B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49CD9A7F46E3BCBA4ACA2241 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -63,6 +65,8 @@
 		32858D231B391D1C007723A7 /* ClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
 		32858D261B3AAEDE007723A7 /* ClockViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockViewModel.swift; sourceTree = "<group>"; };
 		32858D2C1B3AC8DC007723A7 /* MessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		32858D2E1B3BA302007723A7 /* MessageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageView.xib; sourceTree = "<group>"; };
+		32858D301B3BA500007723A7 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		49CD9A7F46E3BCBA4ACA2241 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9360F5B5564FBF05A3BE4B23 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C787405927E3D16A9F52FF10 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -202,6 +206,8 @@
 				32858D211B391608007723A7 /* AlarmView.swift */,
 				32858D231B391D1C007723A7 /* ClockView.swift */,
 				32858D2C1B3AC8DC007723A7 /* MessageView.swift */,
+				32858D2E1B3BA302007723A7 /* MessageView.xib */,
+				32858D301B3BA500007723A7 /* Button.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -315,6 +321,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32858D2F1B3BA302007723A7 /* MessageView.xib in Resources */,
 				32858CED1B386EEE007723A7 /* Main.storyboard in Resources */,
 				32858CF21B386EEE007723A7 /* LaunchScreen.xib in Resources */,
 				32858CEF1B386EEE007723A7 /* Images.xcassets in Resources */,
@@ -393,6 +400,7 @@
 				32858CE81B386EEE007723A7 /* MezamashiConcierge.xcdatamodeld in Sources */,
 				32858D171B390BEA007723A7 /* Alarm.swift in Sources */,
 				32858D221B391608007723A7 /* AlarmView.swift in Sources */,
+				32858D311B3BA500007723A7 /* Button.swift in Sources */,
 				32858D0D1B38F871007723A7 /* UIColor+Extension.swift in Sources */,
 				32858D1D1B3914EC007723A7 /* UIFont+Extension.swift in Sources */,
 				32858D2D1B3AC8DC007723A7 /* MessageView.swift in Sources */,
