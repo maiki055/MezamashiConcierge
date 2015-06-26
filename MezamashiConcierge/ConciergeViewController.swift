@@ -8,12 +8,14 @@
 
 import UIKit
 
-class ConciergeViewController: UIViewController {
+class ConciergeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    @IBOutlet weak var tableView: MenuTableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor.mainColor()
+        tableView.registerNib(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: "Menu")
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,6 +26,21 @@ class ConciergeViewController: UIViewController {
     // MARK: TouchEvent
     @IBAction func didSelectCancelButton(sender: UIButton) {
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    // MARK: UITableViewDataSource
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Menu", forIndexPath: indexPath) as! MenuTableViewCell
+        return cell
+    }
+    
+    // MARK: UITableViewDelegate
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 80
     }
 
 }

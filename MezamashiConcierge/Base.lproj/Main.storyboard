@@ -38,19 +38,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TuA-0i-taV">
-                                <rect key="frame" x="62" y="209" width="250" height="250"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="I0M-4U-GZ3"/>
-                                    <constraint firstAttribute="width" constant="250" id="WO6-Ui-y1s"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jml-6Y-r2r" userLabel="FooterWrapper">
-                                <rect key="frame" x="0.0" y="459" width="375" height="208"/>
+                                <rect key="frame" x="0.0" y="464" width="375" height="203"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kf-rk-XRz" customClass="Button" customModule="MezamashiConcierge" customModuleProvider="target">
-                                        <rect key="frame" x="147" y="89" width="80" height="30"/>
+                                        <rect key="frame" x="147" y="86" width="80" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="9o3-2C-yTS"/>
                                             <constraint firstAttribute="height" constant="30" id="hvT-VU-r5E"/>
@@ -69,10 +61,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o4b-ob-ioB" userLabel="HeaderWrapper">
-                                <rect key="frame" x="0.0" y="64" width="375" height="145"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ご要望がございましたらお申し付けください。" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cho-ae-Azy">
-                                        <rect key="frame" x="10" y="63" width="355" height="20"/>
+                                        <rect key="frame" x="10" y="60" width="355" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="m0p-gs-bpq"/>
                                         </constraints>
@@ -87,23 +79,38 @@
                                     <constraint firstAttribute="centerY" secondItem="cho-ae-Azy" secondAttribute="centerY" id="hL3-lf-fje"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="QWU-S9-Umt" customClass="MenuTableView" customModule="MezamashiConcierge" customModuleProvider="target">
+                                <rect key="frame" x="68" y="204" width="240" height="260"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Xyx-4k-32E"/>
+                                    <constraint firstAttribute="height" constant="260" id="zMG-5i-Qcj"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="QtC-mu-cRr" id="OS2-V7-x9d"/>
+                                    <outlet property="delegate" destination="QtC-mu-cRr" id="5fn-2r-M7A"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Jml-6Y-r2r" firstAttribute="leading" secondItem="SYi-sO-oLF" secondAttribute="leading" id="0L2-vD-ara"/>
                             <constraint firstAttribute="trailing" secondItem="Jml-6Y-r2r" secondAttribute="trailing" id="0c1-IZ-6KP"/>
                             <constraint firstAttribute="bottom" secondItem="Jml-6Y-r2r" secondAttribute="bottom" id="758-2X-HVG"/>
+                            <constraint firstAttribute="centerX" secondItem="QWU-S9-Umt" secondAttribute="centerX" id="9p9-Te-WNX"/>
                             <constraint firstAttribute="trailing" secondItem="o4b-ob-ioB" secondAttribute="trailing" id="CW4-0C-dnk"/>
-                            <constraint firstItem="TuA-0i-taV" firstAttribute="top" secondItem="o4b-ob-ioB" secondAttribute="bottom" id="GnK-NA-A4Z"/>
                             <constraint firstItem="o4b-ob-ioB" firstAttribute="leading" secondItem="SYi-sO-oLF" secondAttribute="leading" id="Hgf-k9-eeb"/>
                             <constraint firstItem="o4b-ob-ioB" firstAttribute="top" secondItem="psE-yl-agS" secondAttribute="bottom" id="LZT-IQ-SyY"/>
-                            <constraint firstItem="Jml-6Y-r2r" firstAttribute="top" secondItem="TuA-0i-taV" secondAttribute="bottom" id="Qhq-zY-rZn"/>
-                            <constraint firstAttribute="centerX" secondItem="TuA-0i-taV" secondAttribute="centerX" id="guk-Hj-9Oa"/>
-                            <constraint firstAttribute="centerY" secondItem="TuA-0i-taV" secondAttribute="centerY" id="nXm-yd-hfA"/>
+                            <constraint firstItem="QWU-S9-Umt" firstAttribute="top" secondItem="o4b-ob-ioB" secondAttribute="bottom" id="WDY-pQ-fes"/>
+                            <constraint firstItem="Jml-6Y-r2r" firstAttribute="top" secondItem="QWU-S9-Umt" secondAttribute="bottom" id="Zo6-4g-89s"/>
+                            <constraint firstAttribute="centerY" secondItem="QWU-S9-Umt" secondAttribute="centerY" id="oKD-zb-mOv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Concierge" id="7aS-wj-0rS"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="QWU-S9-Umt" id="Mjl-HA-bbe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DcU-Ac-Dvk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

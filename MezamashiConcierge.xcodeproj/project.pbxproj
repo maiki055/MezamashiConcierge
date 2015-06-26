@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		322C41931B3D3B9700734FA5 /* MenuTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322C41921B3D3B9700734FA5 /* MenuTableView.swift */; };
+		322C41981B3D406800734FA5 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322C41961B3D406800734FA5 /* MenuTableViewCell.swift */; };
+		322C41991B3D406800734FA5 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 322C41971B3D406800734FA5 /* MenuTableViewCell.xib */; };
 		32858CE51B386EEE007723A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32858CE41B386EEE007723A7 /* AppDelegate.swift */; };
 		32858CE81B386EEE007723A7 /* MezamashiConcierge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 32858CE61B386EEE007723A7 /* MezamashiConcierge.xcdatamodeld */; };
 		32858CEA1B386EEE007723A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32858CE91B386EEE007723A7 /* ViewController.swift */; };
@@ -49,6 +52,9 @@
 
 /* Begin PBXFileReference section */
 		303844DC96B8BE51BDCC30A5 /* Pods_MezamashiConcierge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MezamashiConcierge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		322C41921B3D3B9700734FA5 /* MenuTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableView.swift; sourceTree = "<group>"; };
+		322C41961B3D406800734FA5 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		322C41971B3D406800734FA5 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
 		32858CDF1B386EEE007723A7 /* MezamashiConcierge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MezamashiConcierge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32858CE31B386EEE007723A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32858CE41B386EEE007723A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -225,6 +231,9 @@
 				32858D2E1B3BA302007723A7 /* MessageView.xib */,
 				32858D301B3BA500007723A7 /* Button.swift */,
 				32858D391B3CEF5D007723A7 /* CallConciergeView.swift */,
+				322C41921B3D3B9700734FA5 /* MenuTableView.swift */,
+				322C41961B3D406800734FA5 /* MenuTableViewCell.swift */,
+				322C41971B3D406800734FA5 /* MenuTableViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -347,6 +356,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				322C41991B3D406800734FA5 /* MenuTableViewCell.xib in Resources */,
 				32858D2F1B3BA302007723A7 /* MessageView.xib in Resources */,
 				32858CED1B386EEE007723A7 /* Main.storyboard in Resources */,
 				32858D3E1B3CF778007723A7 /* handbell@2x.png in Resources */,
@@ -421,11 +431,13 @@
 				32858D271B3AAEDE007723A7 /* ClockViewModel.swift in Sources */,
 				32858D3A1B3CEF5D007723A7 /* CallConciergeView.swift in Sources */,
 				32858D331B3BFC94007723A7 /* MessageViewModel.swift in Sources */,
+				322C41931B3D3B9700734FA5 /* MenuTableView.swift in Sources */,
 				32858D241B391D1C007723A7 /* ClockView.swift in Sources */,
 				32858D191B390C70007723A7 /* ManagerModel.swift in Sources */,
 				32858D421B3D300E007723A7 /* ConciergeViewController.swift in Sources */,
 				32858CEA1B386EEE007723A7 /* ViewController.swift in Sources */,
 				32858D151B390B6B007723A7 /* User.swift in Sources */,
+				322C41981B3D406800734FA5 /* MenuTableViewCell.swift in Sources */,
 				32858CE51B386EEE007723A7 /* AppDelegate.swift in Sources */,
 				32858CE81B386EEE007723A7 /* MezamashiConcierge.xcdatamodeld in Sources */,
 				32858D171B390BEA007723A7 /* Alarm.swift in Sources */,
