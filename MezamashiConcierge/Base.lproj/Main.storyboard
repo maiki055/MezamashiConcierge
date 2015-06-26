@@ -110,11 +110,31 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="tableView" destination="QWU-S9-Umt" id="Mjl-HA-bbe"/>
+                        <segue destination="Jar-wl-OAc" kind="show" identifier="pushRouteViewController" id="Arb-c9-CvX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DcU-Ac-Dvk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1363.5" y="288.5"/>
+        </scene>
+        <!--Route View Controller-->
+        <scene sceneID="QSf-F9-sTu">
+            <objects>
+                <viewController id="Jar-wl-OAc" customClass="RouteViewController" customModule="MezamashiConcierge" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="txf-ks-gAu"/>
+                        <viewControllerLayoutGuide type="bottom" id="clK-UF-kod"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XXj-Jf-hrv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S4m-sv-7aM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1860.5" y="288.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AlB-gP-FcR">
