@@ -14,7 +14,7 @@ class NavigationController: UINavigationController {
         super.viewDidLoad()
 
         self.navigationBar.barTintColor = UIColor.subColor02()
-        self.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont.alphanumericFont(26)]
+        self.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont.alphanumericFont(30), NSForegroundColorAttributeName: UIColor.color(decRed: 80, decGreen: 80, decBlue: 80, alpha: 1)]
     }
 
     override func didReceiveMemoryWarning() {
