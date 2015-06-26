@@ -9,13 +9,15 @@
 import UIKit
 
 @objc protocol CallConciergeViewDelegate {
-    func callConciergeView()
+    func callConciergeViewDidSelect(callConciergeView: CallConciergeView)
 }
 
-class CallConciergeView: UIView {
+class CallConciergeView: UIButton, UITextFieldDelegate {
     static let size = CGSize(width: 80, height: 80)
     static let iconSize = CGSize(width: 45, height: 45)
     static let messageHeight: CGFloat = 20
+    
+    weak var delegate: CallConciergeViewDelegate?
     
     convenience init() {
         let origin = CGPoint(x: Devise.screenWidth - CallConciergeView.size.width + 15, y: Devise.screenHeight - CallConciergeView.size.height + 10)
@@ -45,6 +47,8 @@ class CallConciergeView: UIView {
         
         self.addSubview(iconView)
         self.addSubview(messageLabel)
+        
+        self.addTarget(self, action: "didSelectCallConciergeButton:", forControlEvents: .TouchUpInside)
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -54,6 +58,6 @@ class CallConciergeView: UIView {
     // MARK: TouchEvent
     
     func didSelectCallConciergeButton(sender: UIButton) {
-        
+        self.delegate?.callConciergeViewDidSelect(self)
     }
 }

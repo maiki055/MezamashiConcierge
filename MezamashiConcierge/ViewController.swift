@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CallConciergeViewDelegate {
     var alarmView: ClockView!
     var messageView: MessageView!
     
@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         messageView = UINib(nibName: "MessageView", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! MessageView
         messageView.frame = CGRect(x: 0, y: alarmView.frame.maxY + innerMargin, width: view.frame.width, height: 200)
         let callConciergeView = CallConciergeView()
+        callConciergeView.delegate = self
         self.view.addSubview(alarmView)
         self.view.addSubview(messageView)
         self.view.addSubview(callConciergeView)
@@ -69,6 +70,11 @@ class ViewController: UIViewController {
         }
         
         return (alarmViewWidth, alarmViewHeight, innerMargin)
+    }
+    
+    // MARK: CallConciergeViewDelegate
+    func callConciergeViewDidSelect(callConciergeView: CallConciergeView) {
+        self.performSegueWithIdentifier("presentModallyConciergeViewController", sender: self)
     }
 }
 
