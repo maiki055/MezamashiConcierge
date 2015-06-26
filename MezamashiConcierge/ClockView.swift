@@ -44,17 +44,17 @@ class ClockView: UIView {
         timeLabel.textAlignment = NSTextAlignment.Center
         timeLabel.textColor = UIColor.subColor01()
         timeLabel.sizeToFit()
-        timeLabel.center = center
+        timeLabel.center = CGPoint(x: self.frame.width / 2, y: self.frame.height / 2)
         
         let lineView = UIView(frame: CGRect(x: timeLabel.frame.minX, y: timeLabel.frame.maxY - 20, width: timeLabel.frame.width, height: 1))
         lineView.backgroundColor = UIColor.subColor01()
         
         dayLabel.text = "0000/00/00"
-        dayLabel.textAlignment = NSTextAlignment.Center
         dayLabel.font = UIFont.alphanumericFont(20)
+        dayLabel.textAlignment = NSTextAlignment.Center
         dayLabel.textColor = UIColor.subColor01()
         dayLabel.sizeToFit()
-        dayLabel.center = CGPoint(x: center.x, y: lineView.frame.maxY + dayLabel.frame.height)
+        dayLabel.center = CGPoint(x: self.frame.width / 2, y: lineView.frame.maxY + dayLabel.frame.height)
         
         self.addSubview(timeLabel)
         self.addSubview(lineView)
@@ -66,7 +66,7 @@ class ClockView: UIView {
     }
 
     override func drawRect(rect: CGRect) {
-        let hourRedius = self.frame.height * (3/10)
+        let hourRedius = self.frame.width * (3/10)
         let roundAngle = startAngle + 2 * M_PI
 
         drawCircle(redius: hourRedius, endAngle: roundAngle, lineWidth: hourLineWidth, lineColor: baseColor, isDash: false)
@@ -84,6 +84,7 @@ class ClockView: UIView {
     }
     
     func drawCircle(redius radius: CGFloat, endAngle: Double, lineWidth: CGFloat, lineColor: UIColor, isDash: Bool) {
+        let center = CGPoint(x: self.frame.width / 2, y: self.frame.height / 2)
         let path = UIBezierPath(arcCenter: center, radius: radius,  startAngle: CGFloat(startAngle), endAngle: CGFloat(endAngle), clockwise: true)
         path.lineWidth = lineWidth
         lineColor.setStroke()
