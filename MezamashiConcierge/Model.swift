@@ -9,5 +9,9 @@
 import UIKit
 
 class Model: NSObject {
-   
+    func updateByAttributes(attributes: Dictionary<String, AnyObject>, key: String) {
+        if let value: AnyObject = attributes[key] {
+            self.setValue(value, forKey: key)
+        }
+    }
 }

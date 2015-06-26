@@ -12,6 +12,8 @@ class MenuTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var enSubTitleLabel: UILabel!
     @IBOutlet weak var jaSubTitleLabel: UILabel!
+    
+    var menu: ConciergeMenu?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,16 +25,22 @@ class MenuTableViewCell: UITableViewCell {
         titleLabel.textColor = UIColor.subColor02()
         enSubTitleLabel.textColor = UIColor.subColor01()
         jaSubTitleLabel.textColor = UIColor.subColor01()
-        
-        titleLabel.text = "Station"
-        enSubTitleLabel.text = "change the nearest route"
-        jaSubTitleLabel.text = "最寄りの路線を変更"
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        if let unwrappedMenu = menu {
+            titleLabel.text = unwrappedMenu.title
+            enSubTitleLabel.text = unwrappedMenu.enSubTitle
+            jaSubTitleLabel.text = unwrappedMenu.jaSubTitle
+        }
     }
     
 }
