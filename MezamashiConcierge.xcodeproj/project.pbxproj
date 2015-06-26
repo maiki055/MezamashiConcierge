@@ -31,6 +31,7 @@
 		32858D381B3C8004007723A7 /* Devise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32858D371B3C8004007723A7 /* Devise.swift */; };
 		32858D3A1B3CEF5D007723A7 /* CallConciergeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32858D391B3CEF5D007723A7 /* CallConciergeView.swift */; };
 		32858D3E1B3CF778007723A7 /* handbell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32858D3D1B3CF778007723A7 /* handbell@2x.png */; };
+		32858D401B3D2833007723A7 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32858D3F1B3D2833007723A7 /* NavigationController.swift */; };
 		4CAA33ABCF0D176CA04D9771 /* Pods_MezamashiConcierge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303844DC96B8BE51BDCC30A5 /* Pods_MezamashiConcierge.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		8C21BD98B05C8AD257D22B6B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49CD9A7F46E3BCBA4ACA2241 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -75,6 +76,7 @@
 		32858D371B3C8004007723A7 /* Devise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Devise.swift; sourceTree = "<group>"; };
 		32858D391B3CEF5D007723A7 /* CallConciergeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallConciergeView.swift; sourceTree = "<group>"; };
 		32858D3D1B3CF778007723A7 /* handbell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "handbell@2x.png"; sourceTree = "<group>"; };
+		32858D3F1B3D2833007723A7 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		49CD9A7F46E3BCBA4ACA2241 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9360F5B5564FBF05A3BE4B23 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C787405927E3D16A9F52FF10 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				32858CE91B386EEE007723A7 /* ViewController.swift */,
+				32858D3F1B3D2833007723A7 /* NavigationController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 				32858CE81B386EEE007723A7 /* MezamashiConcierge.xcdatamodeld in Sources */,
 				32858D171B390BEA007723A7 /* Alarm.swift in Sources */,
 				32858D221B391608007723A7 /* AlarmView.swift in Sources */,
+				32858D401B3D2833007723A7 /* NavigationController.swift in Sources */,
 				32858D311B3BA500007723A7 /* Button.swift in Sources */,
 				32858D0D1B38F871007723A7 /* UIColor+Extension.swift in Sources */,
 				32858D1D1B3914EC007723A7 /* UIFont+Extension.swift in Sources */,
