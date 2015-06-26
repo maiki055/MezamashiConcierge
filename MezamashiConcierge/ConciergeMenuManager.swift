@@ -21,17 +21,20 @@ class ConciergeMenuManager: ManagerModel {
     
     func createMenus() -> Array<ConciergeMenu> {
         let menu1 = ConciergeMenu(attributes: [
-            "title": "Station",
+            "title": "Route",
             "enSubTitle": "change the nearest route",
-            "jaSubTitle": "最寄りの路線を変更"])
+            "jaSubTitle": "最寄りの路線を変更",
+            "segue": "pushRouteViewController"])
         let menu2 = ConciergeMenu(attributes: [
             "title": "Custom",
             "enSubTitle": "teach the habit",
-            "jaSubTitle": "習慣を教える"])
+            "jaSubTitle": "習慣を教える",
+            "segue": "pushRouteViewController"])
         let menu3 = ConciergeMenu(attributes: [
             "title": "Personal",
             "enSubTitle": "edit personal information",
-            "jaSubTitle": "個人情報の編集"])
+            "jaSubTitle": "個人情報の編集",
+            "segue": "pushRouteViewController"])
         
         return [menu1, menu2, menu3]
     }

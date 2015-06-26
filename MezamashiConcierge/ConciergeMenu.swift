@@ -12,6 +12,7 @@ class ConciergeMenu: Model {
     var title = ""
     var enSubTitle = ""
     var jaSubTitle = ""
+    var segue = ""
     
     init(attributes: Dictionary<String, String>) {
         super.init()
@@ -19,5 +20,6 @@ class ConciergeMenu: Model {
         self.updateByAttributes(attributes, key: "title")
         self.updateByAttributes(attributes, key: "enSubTitle")
         self.updateByAttributes(attributes, key: "jaSubTitle")
+        self.updateByAttributes(attributes, key: "segue")
     }
 }

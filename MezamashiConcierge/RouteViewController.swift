@@ -13,7 +13,8 @@ class RouteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        title = "Route"
+        view.backgroundColor = UIColor.mainColor()
     }
 
     override func didReceiveMemoryWarning() {

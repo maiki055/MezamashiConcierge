@@ -17,6 +17,9 @@ class ConciergeViewController: UIViewController, UITableViewDataSource, UITableV
 
         view.backgroundColor = UIColor.mainColor()
         tableView.registerNib(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: "Menu")
+        
+        let backButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem = backButtonItem
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,6 +47,11 @@ class ConciergeViewController: UIViewController, UITableViewDataSource, UITableV
     // MARK: UITableViewDelegate
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 80
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let segue = menus[indexPath.row].segue
+        self.performSegueWithIdentifier(segue, sender: self)
     }
 
 }
