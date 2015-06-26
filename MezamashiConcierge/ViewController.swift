@@ -23,16 +23,13 @@ class ViewController: UIViewController {
         alarmView = ClockView(frame: CGRect(x: (view.frame.width - alarmViewWidth) / 2, y: (view.frame.height - alarmViewHeight - 200) / 2, width: alarmViewWidth, height: alarmViewHeight))
         messageView = UINib(nibName: "MessageView", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! MessageView
         messageView.frame = CGRect(x: 0, y: alarmView.frame.maxY + innerMargin, width: view.frame.width, height: 200)
+        let callConciergeView = CallConciergeView()
         self.view.addSubview(alarmView)
         self.view.addSubview(messageView)
+        self.view.addSubview(callConciergeView)
         
         update()
         NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "update", userInfo: nil, repeats: true)
-        
-//        let imageView = UIImageView(image: UIImage(named: "handbell"))
-//        imageView.frame.size = CGSize(width: 80, height: 80)
-//        imageView.frame.origin = CGPoint(x: self.view.frame.width - 100, y: self.view.frame.height - 100)
-//        self.view.addSubview(imageView)
     }
 
     override func didReceiveMemoryWarning() {

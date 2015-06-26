@@ -17,6 +17,7 @@ enum deviseHeights: CGFloat {
 
 struct Devise {
     static let currentDevice = UIDevice.currentDevice()
+    static let screenWidth  = UIScreen.mainScreen().bounds.size.width
     static let screenHeight = UIScreen.mainScreen().bounds.size.height
     
     static func isSize(height: deviseHeights) -> Bool {

@@ -28,8 +28,9 @@
 		32858D2F1B3BA302007723A7 /* MessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32858D2E1B3BA302007723A7 /* MessageView.xib */; };
 		32858D311B3BA500007723A7 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32858D301B3BA500007723A7 /* Button.swift */; };
 		32858D331B3BFC94007723A7 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32858D321B3BFC94007723A7 /* MessageViewModel.swift */; };
-		32858D351B3C1949007723A7 /* handbell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32858D341B3C1949007723A7 /* handbell@2x.png */; };
 		32858D381B3C8004007723A7 /* Devise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32858D371B3C8004007723A7 /* Devise.swift */; };
+		32858D3A1B3CEF5D007723A7 /* CallConciergeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32858D391B3CEF5D007723A7 /* CallConciergeView.swift */; };
+		32858D3E1B3CF778007723A7 /* handbell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32858D3D1B3CF778007723A7 /* handbell@2x.png */; };
 		4CAA33ABCF0D176CA04D9771 /* Pods_MezamashiConcierge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303844DC96B8BE51BDCC30A5 /* Pods_MezamashiConcierge.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		8C21BD98B05C8AD257D22B6B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49CD9A7F46E3BCBA4ACA2241 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -71,8 +72,9 @@
 		32858D2E1B3BA302007723A7 /* MessageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageView.xib; sourceTree = "<group>"; };
 		32858D301B3BA500007723A7 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		32858D321B3BFC94007723A7 /* MessageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
-		32858D341B3C1949007723A7 /* handbell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "handbell@2x.png"; sourceTree = "<group>"; };
 		32858D371B3C8004007723A7 /* Devise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Devise.swift; sourceTree = "<group>"; };
+		32858D391B3CEF5D007723A7 /* CallConciergeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallConciergeView.swift; sourceTree = "<group>"; };
+		32858D3D1B3CF778007723A7 /* handbell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "handbell@2x.png"; sourceTree = "<group>"; };
 		49CD9A7F46E3BCBA4ACA2241 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9360F5B5564FBF05A3BE4B23 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C787405927E3D16A9F52FF10 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -193,7 +195,7 @@
 		32858D0A1B38F5E0007723A7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				32858D341B3C1949007723A7 /* handbell@2x.png */,
+				32858D3D1B3CF778007723A7 /* handbell@2x.png */,
 				32858CEE1B386EEE007723A7 /* Images.xcassets */,
 			);
 			name = Resources;
@@ -216,6 +218,7 @@
 				32858D2C1B3AC8DC007723A7 /* MessageView.swift */,
 				32858D2E1B3BA302007723A7 /* MessageView.xib */,
 				32858D301B3BA500007723A7 /* Button.swift */,
+				32858D391B3CEF5D007723A7 /* CallConciergeView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -338,9 +341,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32858D351B3C1949007723A7 /* handbell@2x.png in Resources */,
 				32858D2F1B3BA302007723A7 /* MessageView.xib in Resources */,
 				32858CED1B386EEE007723A7 /* Main.storyboard in Resources */,
+				32858D3E1B3CF778007723A7 /* handbell@2x.png in Resources */,
 				32858CF21B386EEE007723A7 /* LaunchScreen.xib in Resources */,
 				32858CEF1B386EEE007723A7 /* Images.xcassets in Resources */,
 			);
@@ -410,6 +413,7 @@
 			files = (
 				32858D131B390B4C007723A7 /* Model.swift in Sources */,
 				32858D271B3AAEDE007723A7 /* ClockViewModel.swift in Sources */,
+				32858D3A1B3CEF5D007723A7 /* CallConciergeView.swift in Sources */,
 				32858D331B3BFC94007723A7 /* MessageViewModel.swift in Sources */,
 				32858D241B391D1C007723A7 /* ClockView.swift in Sources */,
 				32858D191B390C70007723A7 /* ManagerModel.swift in Sources */,
