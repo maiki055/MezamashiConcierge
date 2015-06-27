@@ -9,6 +9,8 @@
 import UIKit
 
 class Alarm: Model {
+    var fileName = "alarm"
+    var fileType = "m4r"
     var isOn = false
     
     func on() {
