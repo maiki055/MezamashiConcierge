@@ -21,6 +21,8 @@ class MessageView: UIView, UITableViewDelegate {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var jaMessageLabel: UILabel!
     @IBOutlet weak var enMessageLabel: UILabel!
+    @IBOutlet weak var leftButton: Button!
+    @IBOutlet weak var rightButton: Button!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -43,6 +45,9 @@ class MessageView: UIView, UITableViewDelegate {
         jaMessageLabel.textColor = UIColor.subColor01()
         
         enMessageLabel.addSubview(underlineView)
+        
+        leftButton.addTarget(self, action: "didSelectAlermButton:", forControlEvents: .TouchUpInside)
+        rightButton.addTarget(self, action: "didSelectLeaveButton:", forControlEvents: .TouchUpInside)
     }
     
     // MARK: TouchEvent

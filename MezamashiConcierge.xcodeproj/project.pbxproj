@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3216E5571B3DC9B200CE6927 /* MCReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3216E5561B3DC9B200CE6927 /* MCReachability.swift */; };
 		3216E5591B3E304D00CE6927 /* NetworkConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3216E5581B3E304D00CE6927 /* NetworkConnectivity.swift */; };
+		3216E55C1B3E642500CE6927 /* alarm.m4r in Resources */ = {isa = PBXBuildFile; fileRef = 3216E55B1B3E642500CE6927 /* alarm.m4r */; };
 		322C41931B3D3B9700734FA5 /* MenuTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322C41921B3D3B9700734FA5 /* MenuTableView.swift */; };
 		322C41981B3D406800734FA5 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322C41961B3D406800734FA5 /* MenuTableViewCell.swift */; };
 		322C41991B3D406800734FA5 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 322C41971B3D406800734FA5 /* MenuTableViewCell.xib */; };
@@ -59,6 +60,7 @@
 		303844DC96B8BE51BDCC30A5 /* Pods_MezamashiConcierge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MezamashiConcierge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3216E5561B3DC9B200CE6927 /* MCReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCReachability.swift; sourceTree = "<group>"; };
 		3216E5581B3E304D00CE6927 /* NetworkConnectivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConnectivity.swift; sourceTree = "<group>"; };
+		3216E55B1B3E642500CE6927 /* alarm.m4r */ = {isa = PBXFileReference; lastKnownFileType = file; path = alarm.m4r; sourceTree = "<group>"; };
 		322C41921B3D3B9700734FA5 /* MenuTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableView.swift; sourceTree = "<group>"; };
 		322C41961B3D406800734FA5 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		322C41971B3D406800734FA5 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 		32858D0A1B38F5E0007723A7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3216E55B1B3E642500CE6927 /* alarm.m4r */,
 				32858D3D1B3CF778007723A7 /* handbell@2x.png */,
 				32858CEE1B386EEE007723A7 /* Images.xcassets */,
 			);
@@ -340,6 +343,7 @@
 				TargetAttributes = {
 					32858CDE1B386EEE007723A7 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 4B7TU5JDK8;
 					};
 					32858CF61B386EEE007723A7 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -371,6 +375,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3216E55C1B3E642500CE6927 /* alarm.m4r in Resources */,
 				322C41991B3D406800734FA5 /* MenuTableViewCell.xib in Resources */,
 				32858D2F1B3BA302007723A7 /* MessageView.xib in Resources */,
 				32858CED1B386EEE007723A7 /* Main.storyboard in Resources */,
@@ -546,7 +551,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -584,7 +589,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -596,9 +601,13 @@
 			baseConfigurationReference = C787405927E3D16A9F52FF10 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MezamashiConcierge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -607,9 +616,13 @@
 			baseConfigurationReference = 9360F5B5564FBF05A3BE4B23 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MezamashiConcierge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -113,6 +113,8 @@
             <connections>
                 <outlet property="enMessageLabel" destination="SFo-9K-7S7" id="9TP-q6-NbF"/>
                 <outlet property="jaMessageLabel" destination="BzF-gU-xtt" id="gaW-DL-oGO"/>
+                <outlet property="leftButton" destination="0Dw-WE-QpR" id="ghg-zg-1mN"/>
+                <outlet property="rightButton" destination="SpC-EV-9RV" id="96I-ub-CMx"/>
                 <outlet property="titleLabel" destination="UGm-oz-e4Y" id="sHK-xi-NVw"/>
             </connections>
             <point key="canvasLocation" x="320" y="320.5"/>

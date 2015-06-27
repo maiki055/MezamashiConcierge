@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import AVFoundation
 
-class ViewController: UIViewController, CallConciergeViewDelegate {
+class ViewController: UIViewController, CallConciergeViewDelegate, MessageViewDelegate {
     var alarmView: ClockView!
     var messageView: MessageView!
+    var alarmPlayer: AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +25,7 @@ class ViewController: UIViewController, CallConciergeViewDelegate {
         alarmView = ClockView(frame: CGRect(x: (view.frame.width - alarmViewWidth) / 2, y: (view.frame.height - alarmViewHeight - 200) / 2, width: alarmViewWidth, height: alarmViewHeight))
         messageView = UINib(nibName: "MessageView", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! MessageView
         messageView.frame = CGRect(x: 0, y: alarmView.frame.maxY + innerMargin, width: view.frame.width, height: 200)
+        messageView.delegate = self
         let callConciergeView = CallConciergeView()
         callConciergeView.delegate = self
         self.view.addSubview(alarmView)
@@ -41,6 +44,26 @@ class ViewController: UIViewController, CallConciergeViewDelegate {
     func update() {
         alarmView.date = NSDate()
         alarmView.setNeedsDisplay()
+    }
+    
+    // MARK: Alarm
+    func startAlarm() {
+        if let path = NSBundle.mainBundle().pathForResource("alarm", ofType: "m4r") {
+            let fileURL = NSURL(fileURLWithPath: path)
+            var error:NSError?
+            alarmPlayer = AVAudioPlayer(contentsOfURL: fileURL, error: &error)
+            if let unwrappedError = error {
+                println("Error \(unwrappedError.localizedDescription)")
+            }
+            else {
+                alarmPlayer.prepareToPlay()
+                alarmPlayer.play()
+            }
+        }
+    }
+    
+    func stopAlarm() {
+        alarmPlayer.stop()
     }
     
     func allocateRects() -> (alarmWidth: CGFloat, alarmHeight: CGFloat, innerMargin: CGFloat) {
@@ -75,6 +98,15 @@ class ViewController: UIViewController, CallConciergeViewDelegate {
     // MARK: CallConciergeViewDelegate
     func callConciergeViewDidSelect(callConciergeView: CallConciergeView) {
         self.performSegueWithIdentifier("presentModallyConciergeViewController", sender: self)
+    }
+    
+    // MARK: MessageViewDelegate
+    func messageView(messageView: MessageView, didSelectAlermButton button: UIButton) {
+        startAlarm()
+    }
+    
+    func messageView(messageView: MessageView, didSelectLeaveButton button: UIButton) {
+        stopAlarm()
     }
 }
 
