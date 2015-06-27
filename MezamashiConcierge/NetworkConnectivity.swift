@@ -49,7 +49,6 @@ class NetworkConnectivity: NSObject {
         let alertController = UIAlertController(title: "ネットワークに接続されていません", message: "ネットワーク接続がない状態では、天候の情報や運行情報を取得できません", preferredStyle: .Alert)
         let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
         alertController.addAction(defaultAction)
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        appDelegate.window?.rootViewController?.presentViewController(alertController, animated: true, completion: nil)
+        appDelegate().window?.rootViewController?.presentViewController(alertController, animated: true, completion: nil)
     }
 }
