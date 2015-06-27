@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3216E5571B3DC9B200CE6927 /* MCReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3216E5561B3DC9B200CE6927 /* MCReachability.swift */; };
+		3216E5591B3E304D00CE6927 /* NetworkConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3216E5581B3E304D00CE6927 /* NetworkConnectivity.swift */; };
 		322C41931B3D3B9700734FA5 /* MenuTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322C41921B3D3B9700734FA5 /* MenuTableView.swift */; };
 		322C41981B3D406800734FA5 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322C41961B3D406800734FA5 /* MenuTableViewCell.swift */; };
 		322C41991B3D406800734FA5 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 322C41971B3D406800734FA5 /* MenuTableViewCell.xib */; };
@@ -55,6 +57,8 @@
 
 /* Begin PBXFileReference section */
 		303844DC96B8BE51BDCC30A5 /* Pods_MezamashiConcierge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MezamashiConcierge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3216E5561B3DC9B200CE6927 /* MCReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCReachability.swift; sourceTree = "<group>"; };
+		3216E5581B3E304D00CE6927 /* NetworkConnectivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConnectivity.swift; sourceTree = "<group>"; };
 		322C41921B3D3B9700734FA5 /* MenuTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableView.swift; sourceTree = "<group>"; };
 		322C41961B3D406800734FA5 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		322C41971B3D406800734FA5 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
@@ -260,6 +264,8 @@
 			isa = PBXGroup;
 			children = (
 				32858D371B3C8004007723A7 /* Devise.swift */,
+				3216E5561B3DC9B200CE6927 /* MCReachability.swift */,
+				3216E5581B3E304D00CE6927 /* NetworkConnectivity.swift */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -436,12 +442,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3216E5571B3DC9B200CE6927 /* MCReachability.swift in Sources */,
 				32858D131B390B4C007723A7 /* Model.swift in Sources */,
 				32858D271B3AAEDE007723A7 /* ClockViewModel.swift in Sources */,
 				32858D3A1B3CEF5D007723A7 /* CallConciergeView.swift in Sources */,
 				32858D331B3BFC94007723A7 /* MessageViewModel.swift in Sources */,
 				322C41931B3D3B9700734FA5 /* MenuTableView.swift in Sources */,
 				32858D241B391D1C007723A7 /* ClockView.swift in Sources */,
+				3216E5591B3E304D00CE6927 /* NetworkConnectivity.swift in Sources */,
 				32858D191B390C70007723A7 /* ManagerModel.swift in Sources */,
 				32858D421B3D300E007723A7 /* ConciergeViewController.swift in Sources */,
 				32858CEA1B386EEE007723A7 /* ViewController.swift in Sources */,
