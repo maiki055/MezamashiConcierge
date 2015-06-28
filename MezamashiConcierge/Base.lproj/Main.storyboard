@@ -20,11 +20,31 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <segue destination="Fr9-CF-vw5" kind="presentation" identifier="presentModallyConciergeViewController" id="qrZ-1C-shg"/>
+                        <segue destination="nJc-2z-AKP" kind="presentation" identifier="presentModallAlarmViewController" modalTransitionStyle="flipHorizontal" animates="NO" id="fk6-WP-GYA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="342.5" y="288.5"/>
+        </scene>
+        <!--Setting Alarm View Controller-->
+        <scene sceneID="xcB-fG-Yr2">
+            <objects>
+                <viewController id="nJc-2z-AKP" customClass="SettingAlarmViewController" customModule="MezamashiConcierge" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LZt-Zz-kFm"/>
+                        <viewControllerLayoutGuide type="bottom" id="zzc-la-dAc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NLH-bk-pfZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jk0-TK-FxW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="342.5" y="1134.5"/>
         </scene>
         <!--Concierge-->
         <scene sceneID="aMk-EG-Zvr">

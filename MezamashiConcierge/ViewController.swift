@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController, CallConciergeViewDelegate, MessageViewDelegate {
-    var alarmView: ClockView!
+    var clockView: ClockView!
     var messageView: MessageView!
     var alarmPlayer: AVAudioPlayer!
     
@@ -22,16 +22,16 @@ class ViewController: UIViewController, CallConciergeViewDelegate, MessageViewDe
         let alarmViewWidth = rects.0
         let alarmViewHeight = rects.1
         var innerMargin: CGFloat = rects.2
-        alarmView = ClockView(frame: CGRect(x: (view.frame.width - alarmViewWidth) / 2, y: (view.frame.height - alarmViewHeight - 200) / 2, width: alarmViewWidth, height: alarmViewHeight))
+        clockView = ClockView(frame: CGRect(x: (view.frame.width - alarmViewWidth) / 2, y: (view.frame.height - alarmViewHeight - 200) / 2, width: alarmViewWidth, height: alarmViewHeight))
         messageView = UINib(nibName: "MessageView", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! MessageView
-        messageView.frame = CGRect(x: 0, y: alarmView.frame.maxY + innerMargin, width: view.frame.width, height: 200)
+        messageView.frame = CGRect(x: 0, y: clockView.frame.maxY + innerMargin, width: view.frame.width, height: 200)
         messageView.delegate = self
         let callConciergeView = CallConciergeView()
         callConciergeView.delegate = self
-        self.view.addSubview(alarmView)
+        self.view.addSubview(clockView)
         self.view.addSubview(messageView)
         self.view.addSubview(callConciergeView)
-        
+
         update()
         NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "update", userInfo: nil, repeats: true)
     }
@@ -42,11 +42,18 @@ class ViewController: UIViewController, CallConciergeViewDelegate, MessageViewDe
     }
     
     func update() {
-        alarmView.date = NSDate()
-        alarmView.setNeedsDisplay()
+        clockView.date = NSDate()
+        clockView.setNeedsDisplay()
     }
     
     // MARK: Alarm
+    func beginSetAlerm() {
+        performSegueWithIdentifier("presentModallAlarmViewController", sender: self)
+    }
+    
+    func endSetAlerm() {
+    }
+    
     func startAlarm() {
         if let path = NSBundle.mainBundle().pathForResource("alarm", ofType: "m4r") {
             let fileURL = NSURL(fileURLWithPath: path)
@@ -102,11 +109,12 @@ class ViewController: UIViewController, CallConciergeViewDelegate, MessageViewDe
     
     // MARK: MessageViewDelegate
     func messageView(messageView: MessageView, didSelectAlermButton button: UIButton) {
-        startAlarm()
+        beginSetAlerm()
+//        startAlarm()
     }
     
     func messageView(messageView: MessageView, didSelectLeaveButton button: UIButton) {
-        stopAlarm()
+//        stopAlarm()
     }
 }
 
