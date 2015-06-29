@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingAlarmViewController: UIViewController {
+class SettingAlarmViewController: UIViewController, ButtonsWrapperViewDelegate {
     var alarmView: AlarmView!
     let alarm = Alarm()
     
@@ -21,8 +21,22 @@ class SettingAlarmViewController: UIViewController {
         let alarmViewHeight = rects.1
         var innerMargin: CGFloat = rects.2
         alarmView = AlarmView(frame: CGRect(x: (view.frame.width - alarmViewWidth) / 2, y: (view.frame.height - alarmViewHeight - 200) / 2, width: alarmViewWidth, height: alarmViewHeight))
+        
+        let messageLabel = UILabel(frame: CGRect(x: 0, y: (viewMinY(alarmView) - 20) / 2 + 20, width: viewWidth(self.view), height: 20))
+        messageLabel.text = "アラームの時間を設定してください"
+        messageLabel.font = UIFont.font(12)
+        messageLabel.textColor = UIColor.subColor01()
+        messageLabel.textAlignment = NSTextAlignment.Center
+        
+        let buttonsWrapperView = UINib(nibName: "ButtonsWrapperView", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! ButtonsWrapperView
+        buttonsWrapperView.frame = CGRect(x: 0, y: viewMaxY(alarmView), width: viewWidth(self.view), height: 100)
+        buttonsWrapperView.leftButton.setTitle("設定する", forState: .Normal)
+        buttonsWrapperView.rightButton.setTitle("キャンセル", forState: .Normal)
+        buttonsWrapperView.delegate = self
+        
         self.view.addSubview(alarmView)
-
+        self.view.addSubview(messageLabel)
+        self.view.addSubview(buttonsWrapperView)
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,6 +71,25 @@ class SettingAlarmViewController: UIViewController {
         }
         
         return (alarmViewWidth, alarmViewHeight, innerMargin)
+    }
+    
+    // MARK: TouchEvent
+    func didSelectSettingButton(sender: UIButton) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    // MARK: ButtonsWrapperViewDelegate
+    func buttonsWrapperView(buttonsWrapperView: ButtonsWrapperView, didSelectLeftButton: UIButton) {
+        let alertController = UIAlertController(title: "設定の完了", message: "アラームを明日の08:30に設定いたしました", preferredStyle: .Alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .Default) { (alertAction) -> Void in
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        alertController.addAction(defaultAction)
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    func buttonsWrapperView(buttonsWrapperView: ButtonsWrapperView, didSelectRightButton: UIButton) {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 
 }

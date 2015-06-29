@@ -110,11 +110,13 @@ class ViewController: UIViewController, CallConciergeViewDelegate, MessageViewDe
     // MARK: MessageViewDelegate
     func messageView(messageView: MessageView, didSelectAlermButton button: UIButton) {
         beginSetAlerm()
-//        startAlarm()
     }
     
     func messageView(messageView: MessageView, didSelectLeaveButton button: UIButton) {
-//        stopAlarm()
+        let alertController = UIAlertController(title: "おまかせ設定", message: "アラームを明日の08:30に設定いたしました", preferredStyle: .Alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alertController.addAction(defaultAction)
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
 }
 
