@@ -11,5 +11,5 @@ import UIKit
 class AlarmManager: NSObject {
     static let sharedManager = AlarmManager()
     
-    var isOn = false
+    dynamic var isOn = false
 }

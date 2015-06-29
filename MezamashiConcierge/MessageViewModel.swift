@@ -11,10 +11,31 @@ import UIKit
 enum MessageStatus {
     case NoSettingAlarm
     case SettingAlarm
-}
-
-class MessageViewModel: NSObject {
-    var jaMessage = "アラームは設定されていません。"
-    var enMessage = "not setting alarm."
-    var status: MessageStatus = .NoSettingAlarm
+    
+    func jaMessage() -> String {
+        switch self {
+        case .NoSettingAlarm:
+            return "アラームは設定されていません。"
+        case .SettingAlarm:
+            return "アラーム設定済み"
+        }
+    }
+    
+    func enMessage() -> String {
+        switch self {
+        case .NoSettingAlarm:
+            return "not setting alarm."
+        case .SettingAlarm:
+            return "setting alarm."
+        }
+    }
+    
+    func buttons() -> Array<String> {
+        switch self {
+        case .NoSettingAlarm:
+            return ["アラームを設定", "おまかせ設定"]
+        case .SettingAlarm:
+            return ["アラーム取り消し"]
+        }
+    }
 }

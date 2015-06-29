@@ -34,6 +34,11 @@ class ViewController: UIViewController, CallConciergeViewDelegate, MessageViewDe
 
         update()
         NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "update", userInfo: nil, repeats: true)
+        AlarmManager.sharedManager.addObserver(self, forKeyPath: "isOn", options: .Initial | .New, context: nil)
+    }
+    
+    deinit {
+        AlarmManager.sharedManager.removeObserver(self, forKeyPath: "isOn")
     }
 
     override func didReceiveMemoryWarning() {
@@ -117,6 +122,27 @@ class ViewController: UIViewController, CallConciergeViewDelegate, MessageViewDe
         let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
         alertController.addAction(defaultAction)
         self.presentViewController(alertController, animated: true, completion: nil)
+        AlarmManager.sharedManager.isOn = true
+    }
+    
+    func messageView(messageView: MessageView, didSelectCancelButton button: UIButton) {
+        let alertController = UIAlertController(title: "アラームの解除", message: "アラームを解除しました", preferredStyle: .Alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alertController.addAction(defaultAction)
+        self.presentViewController(alertController, animated: true, completion: nil)
+        AlarmManager.sharedManager.isOn = false
+    }
+    
+    // Key Value Observer
+    override func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject : AnyObject], context: UnsafeMutablePointer<Void>) {
+        if keyPath == "isOn" {
+            if change["new"] as! Bool {
+                messageView.messageViewModel = MessageStatus.SettingAlarm
+            }
+            else {
+                messageView.messageViewModel = MessageStatus.NoSettingAlarm
+            }
+        }
     }
 }
 
