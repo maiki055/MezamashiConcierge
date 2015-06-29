@@ -20,7 +20,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <segue destination="Fr9-CF-vw5" kind="presentation" identifier="presentModallyConciergeViewController" id="qrZ-1C-shg"/>
-                        <segue destination="nJc-2z-AKP" kind="presentation" identifier="presentModallAlarmViewController" modalTransitionStyle="flipHorizontal" animates="NO" id="fk6-WP-GYA"/>
+                        <segue destination="nJc-2z-AKP" kind="presentation" identifier="presentModallAlarmViewController" modalTransitionStyle="crossDissolve" id="fk6-WP-GYA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

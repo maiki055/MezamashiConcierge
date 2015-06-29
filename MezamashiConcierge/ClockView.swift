@@ -15,6 +15,9 @@ class ClockView: UIView {
     let timeLabel = UILabel()
     let dayLabel  = UILabel()
     // for draw
+    var hourRadius: CGFloat = 0
+    var minRadius:  CGFloat = 0
+    var secRadius:  CGFloat = 0
     let startAngle = 3 * M_PI / 2
     let hourLineWidth: CGFloat    = 10
     let minuteLineWidth: CGFloat  = 5
@@ -38,6 +41,10 @@ class ClockView: UIView {
         dateFormatterHour.dateFormat = "HH:mm"
         dateFormatterEra.locale = NSLocale(localeIdentifier: "en_US")
         dateFormatterEra.dateFormat = "yyyy/MM/dd"
+        
+        hourRadius = self.frame.width * (3/10)
+        minRadius = hourRadius - (hourLineWidth + 2)
+        secRadius = minRadius - (minuteLineWidth + 4)
         
         timeLabel.text = "00:00"
         timeLabel.font = UIFont.alphanumericFont(55)
@@ -66,17 +73,14 @@ class ClockView: UIView {
     }
 
     override func drawRect(rect: CGRect) {
-        let hourRedius = self.frame.width * (3/10)
         let roundAngle = startAngle + 2 * M_PI
 
-        drawCircle(redius: hourRedius, endAngle: roundAngle, lineWidth: hourLineWidth, lineColor: baseColor, isDash: false)
-        drawCircle(redius: hourRedius, endAngle: startAngle + Double(clockViewModel.shorthand()) * 2 * M_PI, lineWidth: hourLineWidth, lineColor: color, isDash: false)
+        drawCircle(redius: hourRadius, endAngle: roundAngle, lineWidth: hourLineWidth, lineColor: baseColor, isDash: false)
+        drawCircle(redius: hourRadius, endAngle: startAngle + Double(clockViewModel.shorthand()) * 2 * M_PI, lineWidth: hourLineWidth, lineColor: color, isDash: false)
         
-        let minRadius = hourRedius - (hourLineWidth + 2)
         drawCircle(redius: minRadius, endAngle: roundAngle, lineWidth: minuteLineWidth, lineColor: baseColor, isDash: false)
         drawCircle(redius: minRadius, endAngle: startAngle + Double(clockViewModel.longhand()) * 2 * M_PI, lineWidth: minuteLineWidth, lineColor: color, isDash: false)
         
-        let secRadius = minRadius - (minuteLineWidth + 4)
         drawCircle(redius: secRadius, endAngle: roundAngle, lineWidth: secoundLineWidth, lineColor: baseColor, isDash: false)
         drawCircle(redius: secRadius, endAngle: startAngle + Double(clockViewModel.secondhand()) * 2 * M_PI, lineWidth: secoundLineWidth, lineColor: color, isDash: false)
         

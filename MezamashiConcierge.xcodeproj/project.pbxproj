@@ -12,6 +12,7 @@
 		3216E55C1B3E642500CE6927 /* alarm.m4r in Resources */ = {isa = PBXBuildFile; fileRef = 3216E55B1B3E642500CE6927 /* alarm.m4r */; };
 		3216E55E1B3EB5EF00CE6927 /* CommonConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3216E55D1B3EB5EF00CE6927 /* CommonConst.swift */; };
 		3216E5601B3FEBBB00CE6927 /* SettingAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3216E55F1B3FEBBB00CE6927 /* SettingAlarmViewController.swift */; };
+		3216E5621B4033B600CE6927 /* MovingPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3216E5611B4033B500CE6927 /* MovingPoint.swift */; };
 		322C41931B3D3B9700734FA5 /* MenuTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322C41921B3D3B9700734FA5 /* MenuTableView.swift */; };
 		322C41981B3D406800734FA5 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322C41961B3D406800734FA5 /* MenuTableViewCell.swift */; };
 		322C41991B3D406800734FA5 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 322C41971B3D406800734FA5 /* MenuTableViewCell.xib */; };
@@ -65,6 +66,7 @@
 		3216E55B1B3E642500CE6927 /* alarm.m4r */ = {isa = PBXFileReference; lastKnownFileType = file; path = alarm.m4r; sourceTree = "<group>"; };
 		3216E55D1B3EB5EF00CE6927 /* CommonConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonConst.swift; sourceTree = "<group>"; };
 		3216E55F1B3FEBBB00CE6927 /* SettingAlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingAlarmViewController.swift; sourceTree = "<group>"; };
+		3216E5611B4033B500CE6927 /* MovingPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovingPoint.swift; sourceTree = "<group>"; };
 		322C41921B3D3B9700734FA5 /* MenuTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableView.swift; sourceTree = "<group>"; };
 		322C41961B3D406800734FA5 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		322C41971B3D406800734FA5 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				322C41921B3D3B9700734FA5 /* MenuTableView.swift */,
 				322C41961B3D406800734FA5 /* MenuTableViewCell.swift */,
 				322C41971B3D406800734FA5 /* MenuTableViewCell.xib */,
+				3216E5611B4033B500CE6927 /* MovingPoint.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 			files = (
 				3216E5571B3DC9B200CE6927 /* MCReachability.swift in Sources */,
 				32858D131B390B4C007723A7 /* Model.swift in Sources */,
+				3216E5621B4033B600CE6927 /* MovingPoint.swift in Sources */,
 				32858D271B3AAEDE007723A7 /* ClockViewModel.swift in Sources */,
 				3216E5601B3FEBBB00CE6927 /* SettingAlarmViewController.swift in Sources */,
 				32858D3A1B3CEF5D007723A7 /* CallConciergeView.swift in Sources */,
