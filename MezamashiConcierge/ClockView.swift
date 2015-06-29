@@ -15,15 +15,15 @@ class ClockView: UIView {
     let timeLabel = UILabel()
     let dayLabel  = UILabel()
     // for draw
+    let startAngle = 3 * M_PI / 2
     var hourRadius: CGFloat = 0
     var minRadius:  CGFloat = 0
     var secRadius:  CGFloat = 0
-    let startAngle = 3 * M_PI / 2
-    let hourLineWidth: CGFloat    = 10
-    let minuteLineWidth: CGFloat  = 5
+    let hourLineWidth:    CGFloat = 10
+    let minuteLineWidth:  CGFloat = 5
     let secoundLineWidth: CGFloat = 2
-    let color     = UIColor.color(decRed: 208, decGreen: 176, decBlue: 134, alpha: 1)
-    let baseColor = UIColor.color(decRed: 208, decGreen: 176, decBlue: 134, alpha: 0.5)
+    let color     = UIColor.subColor02()
+    let baseColor = UIColor.subColor02Light()
     
     var date: NSDate = NSDate() {
         didSet {
@@ -37,9 +37,10 @@ class ClockView: UIView {
         super.init(frame: frame)
         
         backgroundColor = UIColor.clearColor()
-        dateFormatterHour.locale = NSLocale(localeIdentifier: "en_US")
+        let local = NSLocale(localeIdentifier: "en_US")
+        dateFormatterHour.locale = local
         dateFormatterHour.dateFormat = "HH:mm"
-        dateFormatterEra.locale = NSLocale(localeIdentifier: "en_US")
+        dateFormatterEra.locale = local
         dateFormatterEra.dateFormat = "yyyy/MM/dd"
         
         hourRadius = self.frame.width * (3/10)
@@ -53,7 +54,7 @@ class ClockView: UIView {
         timeLabel.sizeToFit()
         timeLabel.center = CGPoint(x: self.frame.width / 2, y: self.frame.height / 2)
         
-        let lineView = UIView(frame: CGRect(x: timeLabel.frame.minX, y: timeLabel.frame.maxY - 20, width: timeLabel.frame.width, height: 1))
+        let lineView = UIView(frame: CGRect(x: viewMinX(timeLabel), y: viewMaxY(timeLabel) - 20, width: viewWidth(timeLabel), height: 1))
         lineView.backgroundColor = UIColor.subColor01()
         
         dayLabel.text = "0000/00/00"
@@ -61,7 +62,7 @@ class ClockView: UIView {
         dayLabel.textAlignment = NSTextAlignment.Center
         dayLabel.textColor = UIColor.subColor01()
         dayLabel.sizeToFit()
-        dayLabel.center = CGPoint(x: self.frame.width / 2, y: lineView.frame.maxY + dayLabel.frame.height)
+        dayLabel.center = CGPoint(x: viewWidth(self) / 2, y: viewMaxY(lineView) + viewHeight(dayLabel))
         
         self.addSubview(timeLabel)
         self.addSubview(lineView)
@@ -75,20 +76,23 @@ class ClockView: UIView {
     override func drawRect(rect: CGRect) {
         let roundAngle = startAngle + 2 * M_PI
 
+        // Draw Base Circle
         drawCircle(redius: hourRadius, endAngle: roundAngle, lineWidth: hourLineWidth, lineColor: baseColor, isDash: false)
-        drawCircle(redius: hourRadius, endAngle: startAngle + Double(clockViewModel.shorthand()) * 2 * M_PI, lineWidth: hourLineWidth, lineColor: color, isDash: false)
-        
         drawCircle(redius: minRadius, endAngle: roundAngle, lineWidth: minuteLineWidth, lineColor: baseColor, isDash: false)
+        drawCircle(redius: secRadius, endAngle: roundAngle, lineWidth: secoundLineWidth, lineColor: baseColor, isDash: false)
+        
+        // Draw DateTime Circle
+        drawCircle(redius: hourRadius, endAngle: startAngle + Double(clockViewModel.shorthand()) * 2 * M_PI, lineWidth: hourLineWidth, lineColor: color, isDash: false)
         drawCircle(redius: minRadius, endAngle: startAngle + Double(clockViewModel.longhand()) * 2 * M_PI, lineWidth: minuteLineWidth, lineColor: color, isDash: false)
         
-        drawCircle(redius: secRadius, endAngle: roundAngle, lineWidth: secoundLineWidth, lineColor: baseColor, isDash: false)
         drawCircle(redius: secRadius, endAngle: startAngle + Double(clockViewModel.secondhand()) * 2 * M_PI, lineWidth: secoundLineWidth, lineColor: color, isDash: false)
         
+        // Draw Dash Circle
         drawCircle(redius: secRadius - secoundLineWidth - 5, endAngle: roundAngle, lineWidth: 5, lineColor: baseColor, isDash: true)
     }
     
     func drawCircle(redius radius: CGFloat, endAngle: Double, lineWidth: CGFloat, lineColor: UIColor, isDash: Bool) {
-        let center = CGPoint(x: self.frame.width / 2, y: self.frame.height / 2)
+        let center = CGPoint(x: viewWidth(self) / 2, y: viewHeight(self) / 2)
         let path = UIBezierPath(arcCenter: center, radius: radius,  startAngle: CGFloat(startAngle), endAngle: CGFloat(endAngle), clockwise: true)
         path.lineWidth = lineWidth
         lineColor.setStroke()

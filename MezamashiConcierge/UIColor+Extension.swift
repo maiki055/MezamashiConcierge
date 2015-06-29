@@ -21,5 +21,8 @@ extension UIColor {
     class func subColor02() -> UIColor {
         return color(decRed: 208, decGreen: 176, decBlue: 134, alpha: 1)
     }
+    class func subColor02Light() -> UIColor {
+        return color(decRed: 208, decGreen: 176, decBlue: 134, alpha: 0.5)
+    }
 }
 
