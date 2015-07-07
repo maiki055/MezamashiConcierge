@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = UIColor.color(decRed: 80, decGreen: 80, decBlue: 80, alpha: 1)
         
         networkConnectivity = NetworkConnectivity()
+        User.currentUser.createUser()
         // Override point for customization after application launch.
         return true
     }
