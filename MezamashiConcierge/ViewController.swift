@@ -122,7 +122,7 @@ class ViewController: UIViewController, CallConciergeViewDelegate, MessageViewDe
         let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
         alertController.addAction(defaultAction)
         self.presentViewController(alertController, animated: true, completion: nil)
-        AlarmManager.sharedManager.isOn = true
+        AlarmManager.sharedManager.setAlarm(Alarm())
     }
     
     func messageView(messageView: MessageView, didSelectCancelButton button: UIButton) {
@@ -130,7 +130,7 @@ class ViewController: UIViewController, CallConciergeViewDelegate, MessageViewDe
         let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
         alertController.addAction(defaultAction)
         self.presentViewController(alertController, animated: true, completion: nil)
-        AlarmManager.sharedManager.isOn = false
+        AlarmManager.sharedManager.removeAlarm()
     }
     
     // Key Value Observer

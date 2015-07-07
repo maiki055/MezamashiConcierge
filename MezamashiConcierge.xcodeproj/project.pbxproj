@@ -17,6 +17,8 @@
 		3216E5661B4103C900CE6927 /* ButtonsWrapperView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3216E5651B4103C900CE6927 /* ButtonsWrapperView.xib */; };
 		3216E5681B41401D00CE6927 /* ButtonWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3216E5671B41401D00CE6927 /* ButtonWrapperView.swift */; };
 		3216E56A1B41403600CE6927 /* ButtonWrapperView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3216E5691B41403600CE6927 /* ButtonWrapperView.xib */; };
+		3216E56C1B417B4B00CE6927 /* ButtonGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3216E56B1B417B4B00CE6927 /* ButtonGroupView.swift */; };
+		3216E56E1B41842300CE6927 /* ButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3216E56D1B41842300CE6927 /* ButtonModel.swift */; };
 		322C41931B3D3B9700734FA5 /* MenuTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322C41921B3D3B9700734FA5 /* MenuTableView.swift */; };
 		322C41981B3D406800734FA5 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322C41961B3D406800734FA5 /* MenuTableViewCell.swift */; };
 		322C41991B3D406800734FA5 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 322C41971B3D406800734FA5 /* MenuTableViewCell.xib */; };
@@ -75,6 +77,8 @@
 		3216E5651B4103C900CE6927 /* ButtonsWrapperView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonsWrapperView.xib; sourceTree = "<group>"; };
 		3216E5671B41401D00CE6927 /* ButtonWrapperView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonWrapperView.swift; sourceTree = "<group>"; };
 		3216E5691B41403600CE6927 /* ButtonWrapperView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonWrapperView.xib; sourceTree = "<group>"; };
+		3216E56B1B417B4B00CE6927 /* ButtonGroupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonGroupView.swift; sourceTree = "<group>"; };
+		3216E56D1B41842300CE6927 /* ButtonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonModel.swift; sourceTree = "<group>"; };
 		322C41921B3D3B9700734FA5 /* MenuTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableView.swift; sourceTree = "<group>"; };
 		322C41961B3D406800734FA5 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		322C41971B3D406800734FA5 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
@@ -271,6 +275,7 @@
 				32858D2C1B3AC8DC007723A7 /* MessageView.swift */,
 				32858D2E1B3BA302007723A7 /* MessageView.xib */,
 				3216E5611B4033B500CE6927 /* MovingPoint.swift */,
+				3216E56B1B417B4B00CE6927 /* ButtonGroupView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -280,6 +285,7 @@
 			children = (
 				32858D261B3AAEDE007723A7 /* ClockViewModel.swift */,
 				32858D321B3BFC94007723A7 /* MessageViewModel.swift */,
+				3216E56D1B41842300CE6927 /* ButtonModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -478,6 +484,7 @@
 				3216E5601B3FEBBB00CE6927 /* SettingAlarmViewController.swift in Sources */,
 				32858D3A1B3CEF5D007723A7 /* CallConciergeView.swift in Sources */,
 				32858D331B3BFC94007723A7 /* MessageViewModel.swift in Sources */,
+				3216E56C1B417B4B00CE6927 /* ButtonGroupView.swift in Sources */,
 				322C41931B3D3B9700734FA5 /* MenuTableView.swift in Sources */,
 				32858D241B391D1C007723A7 /* ClockView.swift in Sources */,
 				3216E5681B41401D00CE6927 /* ButtonWrapperView.swift in Sources */,
@@ -496,6 +503,7 @@
 				32858D221B391608007723A7 /* AlarmView.swift in Sources */,
 				32858D401B3D2833007723A7 /* NavigationController.swift in Sources */,
 				32858D311B3BA500007723A7 /* Button.swift in Sources */,
+				3216E56E1B41842300CE6927 /* ButtonModel.swift in Sources */,
 				32858D0D1B38F871007723A7 /* UIColor+Extension.swift in Sources */,
 				32858D1D1B3914EC007723A7 /* UIFont+Extension.swift in Sources */,
 				322C419D1B3D6C3D00734FA5 /* ConciergeMenuManager.swift in Sources */,

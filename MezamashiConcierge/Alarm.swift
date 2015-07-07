@@ -9,6 +9,7 @@
 import UIKit
 
 class Alarm: Model {
+    var date: NSDate!
     var fileName = "alarm"
     var fileType = "m4r"
     var isOn = false

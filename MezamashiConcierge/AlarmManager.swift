@@ -12,4 +12,15 @@ class AlarmManager: NSObject {
     static let sharedManager = AlarmManager()
     
     dynamic var isOn = false
+    var activeAlarm: Alarm?
+    
+    func setAlarm(alarm: Alarm) {
+        isOn = true
+        activeAlarm = alarm
+    }
+    
+    func removeAlarm() {
+        activeAlarm = nil
+        isOn = false
+    }
 }
