@@ -1,5 +1,5 @@
 //
-//  Area.swift
+//  RailroadCompany.swift
 //  MezamashiConcierge
 //
 //  Created by shinbo maiki on 2015/07/10.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Area: Model {
+class RailroadCompany: Model {
     var name = ""
-    var railCompanies = [RailroadCompany]()
+    var railroads = []
 }

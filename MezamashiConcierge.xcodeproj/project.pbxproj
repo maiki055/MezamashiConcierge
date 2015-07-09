@@ -53,6 +53,7 @@
 		32858D421B3D300E007723A7 /* ConciergeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32858D411B3D300E007723A7 /* ConciergeViewController.swift */; };
 		32D96E4D1B4ECAE20077C5DA /* AreaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D96E4C1B4ECAE20077C5DA /* AreaManager.swift */; };
 		32D96E4F1B4ECAF40077C5DA /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D96E4E1B4ECAF40077C5DA /* Area.swift */; };
+		32D96E531B4ECC960077C5DA /* RailroadCompany.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D96E521B4ECC960077C5DA /* RailroadCompany.swift */; };
 		4CAA33ABCF0D176CA04D9771 /* Pods_MezamashiConcierge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303844DC96B8BE51BDCC30A5 /* Pods_MezamashiConcierge.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		8C21BD98B05C8AD257D22B6B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49CD9A7F46E3BCBA4ACA2241 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -119,6 +120,7 @@
 		32858D411B3D300E007723A7 /* ConciergeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConciergeViewController.swift; sourceTree = "<group>"; };
 		32D96E4C1B4ECAE20077C5DA /* AreaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaManager.swift; sourceTree = "<group>"; };
 		32D96E4E1B4ECAF40077C5DA /* Area.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
+		32D96E521B4ECC960077C5DA /* RailroadCompany.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailroadCompany.swift; sourceTree = "<group>"; };
 		49CD9A7F46E3BCBA4ACA2241 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9360F5B5564FBF05A3BE4B23 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C787405927E3D16A9F52FF10 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				322C419C1B3D6C3D00734FA5 /* ConciergeMenuManager.swift */,
 				32D96E4E1B4ECAF40077C5DA /* Area.swift */,
 				32D96E4C1B4ECAE20077C5DA /* AreaManager.swift */,
+				32D96E521B4ECC960077C5DA /* RailroadCompany.swift */,
 				32858CE61B386EEE007723A7 /* MezamashiConcierge.xcdatamodeld */,
 			);
 			name = Model;
@@ -486,6 +489,7 @@
 				3216E5571B3DC9B200CE6927 /* MCReachability.swift in Sources */,
 				32858D131B390B4C007723A7 /* Model.swift in Sources */,
 				3216E5621B4033B600CE6927 /* MovingPoint.swift in Sources */,
+				32D96E531B4ECC960077C5DA /* RailroadCompany.swift in Sources */,
 				32858D271B3AAEDE007723A7 /* ClockViewModel.swift in Sources */,
 				3216E5601B3FEBBB00CE6927 /* SettingAlarmViewController.swift in Sources */,
 				32858D3A1B3CEF5D007723A7 /* CallConciergeView.swift in Sources */,

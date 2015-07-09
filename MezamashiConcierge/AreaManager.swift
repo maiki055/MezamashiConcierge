@@ -9,7 +9,7 @@
 import UIKit
 
 class AreaManager: ManagerModel {
-    static let sharedManager = ConciergeMenuManager()
+    static let sharedManager = AreaManager()
     var areas = [Area]()
     
     override init() {
