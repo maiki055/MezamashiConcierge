@@ -10,5 +10,5 @@ import UIKit
 
 class RailroadCompany: Model {
     var name = ""
-    var railroads = []
+    var railroads = [Railroad]()
 }
