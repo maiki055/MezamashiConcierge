@@ -10,7 +10,6 @@ import UIKit
 
 class ConciergeMenuManager: ManagerModel {
     static let sharedManager = ConciergeMenuManager()
-    
     var menus = [ConciergeMenu]()
     
     override init() {
