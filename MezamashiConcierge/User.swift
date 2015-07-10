@@ -21,7 +21,7 @@ class User: Model {
     }
     
     func isAuthenticated() -> Bool {
-        return true
+        return uuid != nil
     }
     
     func createUser() {
@@ -55,16 +55,9 @@ class User: Model {
     }
     
     func patchUserRailroad(railroad_id: Int) {
-        let manager = Manager.sharedInstance
-        manager.session.configuration.HTTPAdditionalHeaders = ["X-Auth-Token": self.uuid!]
-        request(.PATCH, "http://localhost:4000/api/v1/users/railroad", parameters: ["railroad_id": railroad_id], encoding: .JSON)
-            .responseJSON { (request, response, data, error) -> Void in
-                if error != nil {
-                    return
-                }
-                let json = JSON(data!)
-                print(json)
-        }
+        API.request(Alamofire.Method.PATCH, route: "users/railroad", parameters: ["railroad_id": railroad_id], needAuth: true, success: { (json) -> Void in
+            print(json)
+        }, failure: nil, always: nil)
     }
 
 }
