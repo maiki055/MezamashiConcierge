@@ -22,5 +22,9 @@ class Area: Model {
             let railroadCompany = RailroadCompany(json: subJson)
             self.railroadCompanies.append(railroadCompany)
         }
+        for (index: String, subJson: JSON) in json["prefectures"] {
+            let prefecture = Prefecture(json: subJson)
+            self.prefectures.append(prefecture)
+        }
     }
 }

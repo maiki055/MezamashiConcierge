@@ -7,7 +7,14 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class City: Model {
     var name = ""
+    
+    override init(json: JSON) {
+        super.init(json: json)
+        
+        name = json["name"].string!
+    }
 }

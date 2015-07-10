@@ -19,16 +19,12 @@ class AreaManager: ManagerModel {
     }
     
     func fetchAreas() {
-//        let manager = Manager.sharedInstance
-//        manager.session.configuration.HTTPAdditionalHeaders = ["X-Auth-Token": User.currentUser.uuid!]
         areas.removeAll(keepCapacity: false)
-        request(.GET, "http://localhost:4000/api/v1/areas", parameters: nil, encoding: .JSON)
-            .responseJSON { (request, response, data, error) -> Void in
-                let json = JSON(data!)
-                for (index: String, subJson: JSON) in json["areas"] {
-                    let area = Area(json: subJson)
-                    self.areas.append(area)
-                }
-        }
+        API.request(Method.GET, route: "areas", parameters: nil, needAuth: false, success: { (json) -> Void in
+            for (index: String, subJson: JSON) in json["areas"] {
+                let area = Area(json: subJson)
+                self.areas.append(area)
+            }
+        }, failure: nil, always: nil)
     }
 }

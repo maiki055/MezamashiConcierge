@@ -7,8 +7,19 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class Prefecture: Model {
     var name = ""
     var cities = [City]()
+    
+    override init(json: JSON) {
+        super.init(json: json)
+        
+        name = json["name"].string!
+        for (index: String, subJson: JSON) in json["cities"] {
+            let city = City(json: subJson)
+            self.cities.append(city)
+        }
+    }
 }
