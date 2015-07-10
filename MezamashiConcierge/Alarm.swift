@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class Alarm: Model {
     var date: NSDate!
@@ -20,5 +22,15 @@ class Alarm: Model {
     
     func off() {
         isOn = false
+    }
+    
+    func fetchAlarm() {
+        let manager = Manager.sharedInstance
+        manager.session.configuration.HTTPAdditionalHeaders = ["X-Auth-Token": User.currentUser.uuid!]
+        request(.GET, "http://localhost:3000/api/v1/alarms/my_alarm", parameters: nil, encoding: .JSON)
+            .responseJSON { (request, response, data, error) -> Void in
+                let objs = JSON(data!)
+                println(objs)
+        }
     }
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 enum RailroadStatus: Int {
     case Usually
@@ -19,4 +20,10 @@ class Railroad: Model {
     var state = ""
     var stateDetail = ""
     var status: RailroadStatus = .Usually
+    
+    override init(json: JSON) {
+        super.init(json: json)
+        
+        name = json["name"].string!
+    }
 }

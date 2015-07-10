@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class AreaManager: ManagerModel {
     static let sharedManager = AreaManager()
@@ -14,28 +16,19 @@ class AreaManager: ManagerModel {
     
     override init() {
         super.init()
-        
-        areas = fetchAreas()
     }
     
-    func fetchAreas() -> Array<Area> {
-        let area1 = Area()
-        area1.name = "北海道"
-        let area2 = Area()
-        area2.name = "東北"
-        let area3 = Area()
-        area3.name = "関東"
-        let area4 = Area()
-        area4.name = "中部"
-        let area5 = Area()
-        area5.name = "近畿"
-        let area6 = Area()
-        area6.name = "中国"
-        let area7 = Area()
-        area7.name = "四国"
-        let area8 = Area()
-        area8.name = "九州"
-        
-        return [area1, area2, area3, area4, area5, area6, area7, area8]
+    func fetchAreas() {
+//        let manager = Manager.sharedInstance
+//        manager.session.configuration.HTTPAdditionalHeaders = ["X-Auth-Token": User.currentUser.uuid!]
+        areas.removeAll(keepCapacity: false)
+        request(.GET, "http://localhost:4000/api/v1/areas", parameters: nil, encoding: .JSON)
+            .responseJSON { (request, response, data, error) -> Void in
+                let json = JSON(data!)
+                for (index: String, subJson: JSON) in json["areas"] {
+                    let area = Area(json: subJson)
+                    self.areas.append(area)
+                }
+        }
     }
 }

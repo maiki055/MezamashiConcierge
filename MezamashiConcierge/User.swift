@@ -28,8 +28,12 @@ class User: Model {
         if uuid != nil {
             return
         }
-        Alamofire.request(.POST, "http://localhost:4000/api/v1/users/sign_up", parameters: nil, encoding: .JSON)
+        
+        request(.POST, "http://localhost:4000/api/v1/users/sign_up", parameters: nil, encoding: .JSON)
             .responseJSON { (request, response, data, error) -> Void in
+                if error != nil {
+                    return
+                }
                 let objs = JSON(data!)
                 self.uuid = objs["uuid"].string!
                 self.saveUUID()

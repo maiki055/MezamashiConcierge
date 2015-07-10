@@ -7,8 +7,19 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class Area: Model {
     var name = ""
-    var railCompanies = [RailroadCompany]()
+    var railroadCompanies = [RailroadCompany]()
+    
+    override init(json: JSON) {
+        super.init(json: json)
+        
+        name = json["name"].string!
+        for (index: String, subJson: JSON) in json["railroad_companies"] {
+            let railroadCompany = RailroadCompany(json: subJson)
+            self.railroadCompanies.append(railroadCompany)
+        }
+    }
 }
