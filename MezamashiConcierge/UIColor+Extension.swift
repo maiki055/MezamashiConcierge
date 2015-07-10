@@ -13,7 +13,7 @@ extension UIColor {
         return UIColor(red: decRed/255.0, green: decGreen/255.0, blue: decBlue/255.0, alpha: alpha)
     }
     class func mainColor() -> UIColor {
-        return color(decRed: 28, decGreen: 8, decBlue: 0, alpha: 1)
+        return color(decRed: 40, decGreen: 18, decBlue: 5, alpha: 1)
     }
     class func subColor01() -> UIColor {
         return color(decRed: 255, decGreen: 255, decBlue:2550, alpha: 1)
