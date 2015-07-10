@@ -126,6 +126,7 @@
                     <connections>
                         <outlet property="tableView" destination="QWU-S9-Umt" id="Mjl-HA-bbe"/>
                         <segue destination="Jar-wl-OAc" kind="show" identifier="pushAreaViewController" id="Arb-c9-CvX"/>
+                        <segue destination="Ufg-8i-oTt" kind="show" identifier="pushCustomViewController" id="ycJ-Rf-SOF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DcU-Ac-Dvk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -180,6 +181,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S4m-sv-7aM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1860.5" y="288.5"/>
+        </scene>
+        <!--Custom View Controller-->
+        <scene sceneID="Wwj-yY-Oy8">
+            <objects>
+                <viewController id="Ufg-8i-oTt" customClass="CustomViewController" customModule="MezamashiConcierge" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gl3-R3-crv"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kgv-Pm-kIR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WrU-wn-xg8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oBi-PG-YHO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1860.5" y="1102.5"/>
         </scene>
         <!--Route View Controller-->
         <scene sceneID="Bo4-Hn-SkM">

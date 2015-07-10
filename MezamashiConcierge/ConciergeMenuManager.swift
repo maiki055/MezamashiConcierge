@@ -28,7 +28,7 @@ class ConciergeMenuManager: ManagerModel {
             "title": "Custom",
             "enSubTitle": "teach the habit",
             "jaSubTitle": "習慣を教える",
-            "segue": "pushAreaViewController"])
+            "segue": "pushCustomViewController"])
         let menu3 = ConciergeMenu(attributes: [
             "title": "Personal",
             "enSubTitle": "edit personal information",

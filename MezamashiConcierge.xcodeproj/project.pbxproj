@@ -54,6 +54,7 @@
 		32D4FBC71B4FDD220025A9FB /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D4FBC61B4FDD220025A9FB /* API.swift */; };
 		32D4FBC91B5032FB0025A9FB /* Prefecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D4FBC81B5032FB0025A9FB /* Prefecture.swift */; };
 		32D4FBCB1B5033340025A9FB /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D4FBCA1B5033340025A9FB /* City.swift */; };
+		32D4FBCD1B50392B0025A9FB /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D4FBCC1B50392B0025A9FB /* CustomViewController.swift */; };
 		32D96E4D1B4ECAE20077C5DA /* AreaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D96E4C1B4ECAE20077C5DA /* AreaManager.swift */; };
 		32D96E4F1B4ECAF40077C5DA /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D96E4E1B4ECAF40077C5DA /* Area.swift */; };
 		32D96E531B4ECC960077C5DA /* RailroadCompany.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D96E521B4ECC960077C5DA /* RailroadCompany.swift */; };
@@ -133,6 +134,7 @@
 		32D4FBC61B4FDD220025A9FB /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		32D4FBC81B5032FB0025A9FB /* Prefecture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prefecture.swift; sourceTree = "<group>"; };
 		32D4FBCA1B5033340025A9FB /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		32D4FBCC1B50392B0025A9FB /* CustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		32D96E4C1B4ECAE20077C5DA /* AreaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaManager.swift; sourceTree = "<group>"; };
 		32D96E4E1B4ECAF40077C5DA /* Area.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
 		32D96E521B4ECC960077C5DA /* RailroadCompany.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailroadCompany.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 				32858D411B3D300E007723A7 /* ConciergeViewController.swift */,
 				32D96E581B4ECE910077C5DA /* AreaViewController.swift */,
 				322C419E1B3D78D900734FA5 /* RouteViewController.swift */,
+				32D4FBCC1B50392B0025A9FB /* CustomViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -538,6 +541,7 @@
 				32858D331B3BFC94007723A7 /* MessageViewModel.swift in Sources */,
 				3216E56C1B417B4B00CE6927 /* ButtonGroupView.swift in Sources */,
 				322C41931B3D3B9700734FA5 /* MenuTableView.swift in Sources */,
+				32D4FBCD1B50392B0025A9FB /* CustomViewController.swift in Sources */,
 				32858D241B391D1C007723A7 /* ClockView.swift in Sources */,
 				32D96E631B4F63B60077C5DA /* UINavigationItem+Extension.swift in Sources */,
 				3216E5681B41401D00CE6927 /* ButtonWrapperView.swift in Sources */,

@@ -29,15 +29,10 @@ class User: Model {
             return
         }
         
-        request(.POST, "http://localhost:4000/api/v1/users/sign_up", parameters: nil, encoding: .JSON)
-            .responseJSON { (request, response, data, error) -> Void in
-                if error != nil {
-                    return
-                }
-                let json = JSON(data!)
-                self.uuid = json["uuid"].string!
-                self.saveUUID()
-        }
+        API.request(Alamofire.Method.POST, route: "users/sign_up", parameters: nil, needAuth: false, success: { (json) -> Void in
+            self.uuid = json["uuid"].string!
+            self.saveUUID()
+            }, failure: nil, always: nil)
     }
     
     func saveUUID() {
