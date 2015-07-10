@@ -80,24 +80,14 @@
                                     <constraint firstAttribute="centerX" secondItem="5kf-rk-XRz" secondAttribute="centerX" id="mxJ-IQ-qcv"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o4b-ob-ioB" userLabel="HeaderWrapper">
-                                <rect key="frame" x="0.0" y="64" width="375" height="140"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ご要望がございましたらお申し付けください。" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cho-ae-Azy">
-                                        <rect key="frame" x="10" y="60" width="355" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="m0p-gs-bpq"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="12"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o4b-ob-ioB" userLabel="HeaderWrapper" customClass="HeaderMessageView" customModule="MezamashiConcierge" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="100"/>
                                 <constraints>
-                                    <constraint firstItem="cho-ae-Azy" firstAttribute="leading" secondItem="o4b-ob-ioB" secondAttribute="leading" constant="10" id="MKg-hA-dbK"/>
-                                    <constraint firstAttribute="trailing" secondItem="cho-ae-Azy" secondAttribute="trailing" constant="10" id="Y8s-Qa-IkQ"/>
-                                    <constraint firstAttribute="centerY" secondItem="cho-ae-Azy" secondAttribute="centerY" id="hL3-lf-fje"/>
+                                    <constraint firstAttribute="height" constant="100" id="ojO-fa-5qM"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="message" value="ご要望がございましたらお申し付けください。"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="QWU-S9-Umt" customClass="MenuTableView" customModule="MezamashiConcierge" customModuleProvider="target">
                                 <rect key="frame" x="68" y="204" width="240" height="260"/>
@@ -125,6 +115,11 @@
                             <constraint firstItem="Jml-6Y-r2r" firstAttribute="top" secondItem="QWU-S9-Umt" secondAttribute="bottom" id="Zo6-4g-89s"/>
                             <constraint firstAttribute="centerY" secondItem="QWU-S9-Umt" secondAttribute="centerY" id="oKD-zb-mOv"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="WDY-pQ-fes"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Concierge" id="7aS-wj-0rS"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -153,27 +148,15 @@
                                 <rect key="frame" x="0.0" y="100" width="375" height="503"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MhA-Ic-8ok">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MhA-Ic-8ok" customClass="HeaderMessageView" customModule="MezamashiConcierge" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="使用する路線のエリアを選んでください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3S-4x-TFQ">
-                                        <rect key="frame" x="8" y="40" width="359" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="k71-Ur-vbd"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="12"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="D3S-4x-TFQ" firstAttribute="leading" secondItem="MhA-Ic-8ok" secondAttribute="leading" constant="8" id="g3Q-HE-HnW"/>
-                                    <constraint firstAttribute="centerX" secondItem="D3S-4x-TFQ" secondAttribute="centerX" id="okI-sn-mYc"/>
-                                    <constraint firstAttribute="centerY" secondItem="D3S-4x-TFQ" secondAttribute="centerY" id="p2U-lq-GTs"/>
-                                    <constraint firstAttribute="trailing" secondItem="D3S-4x-TFQ" secondAttribute="trailing" constant="8" id="xRT-kY-3xm"/>
                                     <constraint firstAttribute="height" constant="100" id="zga-le-08I"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="message" value="使用する路線のエリアを選んでください"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -207,10 +190,36 @@
                         <viewControllerLayoutGuide type="bottom" id="GL4-gb-Cpc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="PKf-xO-OVu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2oU-iA-LDQ" customClass="HeaderMessageView" customModule="MezamashiConcierge" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="oAn-ip-QVN"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="message" value="利用する路線を選んでください"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Hl1-Yx-ARd">
+                                <rect key="frame" x="0.0" y="100" width="375" height="503"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GL4-gb-Cpc" firstAttribute="top" secondItem="Hl1-Yx-ARd" secondAttribute="bottom" id="Fu1-fa-TM0"/>
+                            <constraint firstAttribute="trailing" secondItem="2oU-iA-LDQ" secondAttribute="trailing" id="OYr-zb-v5p"/>
+                            <constraint firstItem="Hl1-Yx-ARd" firstAttribute="top" secondItem="2oU-iA-LDQ" secondAttribute="bottom" id="V5p-z6-QTE"/>
+                            <constraint firstAttribute="trailing" secondItem="Hl1-Yx-ARd" secondAttribute="trailing" id="ZqY-6G-j52"/>
+                            <constraint firstItem="2oU-iA-LDQ" firstAttribute="leading" secondItem="PKf-xO-OVu" secondAttribute="leading" id="k9O-Oq-GcA"/>
+                            <constraint firstItem="Hl1-Yx-ARd" firstAttribute="leading" secondItem="PKf-xO-OVu" secondAttribute="leading" id="ww3-vK-XjI"/>
+                            <constraint firstItem="2oU-iA-LDQ" firstAttribute="top" secondItem="1sR-11-o7G" secondAttribute="bottom" id="xHL-8Y-mcP"/>
+                        </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DI2-hg-QUe" userLabel="First Responder" sceneMemberID="firstResponder"/>
