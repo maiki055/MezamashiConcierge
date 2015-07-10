@@ -18,6 +18,7 @@ class RouteViewController: UIViewController, CommomTableViewDelegate {
         title = "Route"
         view.backgroundColor = UIColor.mainColor()
         tableView.customDelegate = self
+        tableView.area = area
     }
 
     override func didReceiveMemoryWarning() {
