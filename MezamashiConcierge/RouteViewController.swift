@@ -29,6 +29,8 @@ class RouteViewController: UIViewController, CommomTableViewDelegate {
 
     // MARK: CommomTableViewDelegate
     func commonTableView(commonTableView: CommonTableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let railroad = area.railroadCompanies[indexPath.section].railroads[indexPath.row]
+        User.currentUser.patchUserRailroad(railroad.id)
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 }

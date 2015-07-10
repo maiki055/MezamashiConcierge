@@ -34,8 +34,8 @@ class User: Model {
                 if error != nil {
                     return
                 }
-                let objs = JSON(data!)
-                self.uuid = objs["uuid"].string!
+                let json = JSON(data!)
+                self.uuid = json["uuid"].string!
                 self.saveUUID()
         }
     }
@@ -53,4 +53,18 @@ class User: Model {
             self.uuid = uuid
         }
     }
+    
+    func patchUserRailroad(railroad_id: Int) {
+        let manager = Manager.sharedInstance
+        manager.session.configuration.HTTPAdditionalHeaders = ["X-Auth-Token": self.uuid!]
+        request(.PATCH, "http://localhost:4000/api/v1/users/railroad", parameters: ["railroad_id": railroad_id], encoding: .JSON)
+            .responseJSON { (request, response, data, error) -> Void in
+                if error != nil {
+                    return
+                }
+                let json = JSON(data!)
+                print(json)
+        }
+    }
+
 }
