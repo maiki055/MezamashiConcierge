@@ -16,6 +16,11 @@ class CommonTableViewCell: UITableViewCell {
         
         label.font = UIFont.font(12)
         label.textColor = UIColor.subColor02()
+        
+        let line = UIView(frame: CGRect(x: 8, y: viewHeight(self) - 0.5, width: viewWidth(self) - 16, height: 0.5))
+        line.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.5)
+        line.autoresizingMask = .FlexibleTopMargin | .FlexibleRightMargin | .FlexibleLeftMargin
+        contentView.addSubview(line)
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
