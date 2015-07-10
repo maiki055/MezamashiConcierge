@@ -57,6 +57,8 @@
 		32D96E571B4ECD530077C5DA /* Railroad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D96E561B4ECD530077C5DA /* Railroad.swift */; };
 		32D96E591B4ECE910077C5DA /* AreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D96E581B4ECE910077C5DA /* AreaViewController.swift */; };
 		32D96E5D1B4ED08E0077C5DA /* CommonTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D96E5C1B4ED08E0077C5DA /* CommonTableView.swift */; };
+		32D96E601B4ED0AF0077C5DA /* CommonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D96E5E1B4ED0AF0077C5DA /* CommonTableViewCell.swift */; };
+		32D96E611B4ED0AF0077C5DA /* CommonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D96E5F1B4ED0AF0077C5DA /* CommonTableViewCell.xib */; };
 		4CAA33ABCF0D176CA04D9771 /* Pods_MezamashiConcierge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303844DC96B8BE51BDCC30A5 /* Pods_MezamashiConcierge.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		8C21BD98B05C8AD257D22B6B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49CD9A7F46E3BCBA4ACA2241 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -127,6 +129,8 @@
 		32D96E561B4ECD530077C5DA /* Railroad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Railroad.swift; sourceTree = "<group>"; };
 		32D96E581B4ECE910077C5DA /* AreaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaViewController.swift; sourceTree = "<group>"; };
 		32D96E5C1B4ED08E0077C5DA /* CommonTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonTableView.swift; sourceTree = "<group>"; };
+		32D96E5E1B4ED0AF0077C5DA /* CommonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonTableViewCell.swift; sourceTree = "<group>"; };
+		32D96E5F1B4ED0AF0077C5DA /* CommonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommonTableViewCell.xib; sourceTree = "<group>"; };
 		49CD9A7F46E3BCBA4ACA2241 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9360F5B5564FBF05A3BE4B23 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C787405927E3D16A9F52FF10 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -294,6 +298,8 @@
 				3216E5611B4033B500CE6927 /* MovingPoint.swift */,
 				3216E56B1B417B4B00CE6927 /* ButtonGroupView.swift */,
 				32D96E5C1B4ED08E0077C5DA /* CommonTableView.swift */,
+				32D96E5E1B4ED0AF0077C5DA /* CommonTableViewCell.swift */,
+				32D96E5F1B4ED0AF0077C5DA /* CommonTableViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -420,6 +426,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32D96E611B4ED0AF0077C5DA /* CommonTableViewCell.xib in Resources */,
 				3216E55C1B3E642500CE6927 /* alarm.m4r in Resources */,
 				322C41991B3D406800734FA5 /* MenuTableViewCell.xib in Resources */,
 				3216E5661B4103C900CE6927 /* ButtonsWrapperView.xib in Resources */,
@@ -513,6 +520,7 @@
 				3216E5591B3E304D00CE6927 /* NetworkConnectivity.swift in Sources */,
 				32858D191B390C70007723A7 /* ManagerModel.swift in Sources */,
 				32858D421B3D300E007723A7 /* ConciergeViewController.swift in Sources */,
+				32D96E601B4ED0AF0077C5DA /* CommonTableViewCell.swift in Sources */,
 				32858CEA1B386EEE007723A7 /* ViewController.swift in Sources */,
 				32858D151B390B6B007723A7 /* User.swift in Sources */,
 				3216E55E1B3EB5EF00CE6927 /* CommonConst.swift in Sources */,
