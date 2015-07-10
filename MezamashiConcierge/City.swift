@@ -1,5 +1,5 @@
 //
-//  Prefecture.swift
+//  City.swift
 //  MezamashiConcierge
 //
 //  Created by shinbo maiki on 2015/07/11.
@@ -8,7 +8,6 @@
 
 import UIKit
 
-class Prefecture: Model {
+class City: Model {
     var name = ""
-    var cities = [City]()
 }
