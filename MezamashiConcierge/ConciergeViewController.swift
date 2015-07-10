@@ -18,8 +18,7 @@ class ConciergeViewController: UIViewController, UITableViewDataSource, UITableV
         view.backgroundColor = UIColor.mainColor()
         tableView.registerNib(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: "Menu")
         
-        let backButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
-        navigationItem.backBarButtonItem = backButtonItem
+        navigationItem.clearBackButtonTitle()
     }
 
     override func didReceiveMemoryWarning() {

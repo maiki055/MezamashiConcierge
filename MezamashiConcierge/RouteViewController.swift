@@ -9,6 +9,7 @@
 import UIKit
 
 class RouteViewController: UIViewController {
+    var area: Area!
 
     override func viewDidLoad() {
         super.viewDidLoad()
