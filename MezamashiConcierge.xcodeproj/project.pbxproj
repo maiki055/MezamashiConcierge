@@ -59,6 +59,7 @@
 		32D96E5D1B4ED08E0077C5DA /* CommonTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D96E5C1B4ED08E0077C5DA /* CommonTableView.swift */; };
 		32D96E601B4ED0AF0077C5DA /* CommonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D96E5E1B4ED0AF0077C5DA /* CommonTableViewCell.swift */; };
 		32D96E611B4ED0AF0077C5DA /* CommonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D96E5F1B4ED0AF0077C5DA /* CommonTableViewCell.xib */; };
+		32D96E631B4F63B60077C5DA /* UINavigationItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D96E621B4F63B60077C5DA /* UINavigationItem+Extension.swift */; };
 		4CAA33ABCF0D176CA04D9771 /* Pods_MezamashiConcierge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303844DC96B8BE51BDCC30A5 /* Pods_MezamashiConcierge.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		8C21BD98B05C8AD257D22B6B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49CD9A7F46E3BCBA4ACA2241 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -131,6 +132,7 @@
 		32D96E5C1B4ED08E0077C5DA /* CommonTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonTableView.swift; sourceTree = "<group>"; };
 		32D96E5E1B4ED0AF0077C5DA /* CommonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonTableViewCell.swift; sourceTree = "<group>"; };
 		32D96E5F1B4ED0AF0077C5DA /* CommonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommonTableViewCell.xib; sourceTree = "<group>"; };
+		32D96E621B4F63B60077C5DA /* UINavigationItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+Extension.swift"; sourceTree = "<group>"; };
 		49CD9A7F46E3BCBA4ACA2241 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9360F5B5564FBF05A3BE4B23 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C787405927E3D16A9F52FF10 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 			children = (
 				32858D0C1B38F871007723A7 /* UIColor+Extension.swift */,
 				32858D1C1B3914EC007723A7 /* UIFont+Extension.swift */,
+				32D96E621B4F63B60077C5DA /* UINavigationItem+Extension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -515,6 +518,7 @@
 				3216E56C1B417B4B00CE6927 /* ButtonGroupView.swift in Sources */,
 				322C41931B3D3B9700734FA5 /* MenuTableView.swift in Sources */,
 				32858D241B391D1C007723A7 /* ClockView.swift in Sources */,
+				32D96E631B4F63B60077C5DA /* UINavigationItem+Extension.swift in Sources */,
 				3216E5681B41401D00CE6927 /* ButtonWrapperView.swift in Sources */,
 				32D96E571B4ECD530077C5DA /* Railroad.swift in Sources */,
 				3216E5591B3E304D00CE6927 /* NetworkConnectivity.swift in Sources */,
