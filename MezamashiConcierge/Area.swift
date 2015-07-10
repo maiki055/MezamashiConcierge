@@ -12,6 +12,7 @@ import SwiftyJSON
 class Area: Model {
     var name = ""
     var railroadCompanies = [RailroadCompany]()
+    var prefectures = [Prefecture]()
     
     override init(json: JSON) {
         super.init(json: json)
