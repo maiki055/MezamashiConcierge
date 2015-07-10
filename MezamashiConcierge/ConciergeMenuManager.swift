@@ -23,17 +23,17 @@ class ConciergeMenuManager: ManagerModel {
             "title": "Route",
             "enSubTitle": "change the nearest route",
             "jaSubTitle": "最寄りの路線を変更",
-            "segue": "pushRouteViewController"])
+            "segue": "pushAreaViewController"])
         let menu2 = ConciergeMenu(attributes: [
             "title": "Custom",
             "enSubTitle": "teach the habit",
             "jaSubTitle": "習慣を教える",
-            "segue": "pushRouteViewController"])
+            "segue": "pushAreaViewController"])
         let menu3 = ConciergeMenu(attributes: [
             "title": "Personal",
             "enSubTitle": "edit personal information",
             "jaSubTitle": "個人情報の編集",
-            "segue": "pushRouteViewController"])
+            "segue": "pushAreaViewController"])
         
         return [menu1, menu2, menu3]
     }
