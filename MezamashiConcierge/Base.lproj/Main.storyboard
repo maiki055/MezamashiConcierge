@@ -240,10 +240,36 @@
                         <viewControllerLayoutGuide type="bottom" id="ZD0-8f-Jtk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MQZ-5h-kmB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PC8-cA-XJI" customClass="HeaderMessageView" customModule="MezamashiConcierge" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="inJ-fW-eKq"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="message" value="貴方について詳細な情報を教えてください。"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="EIK-9a-Xzr" customClass="PersonTableView" customModule="MezamashiConcierge" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="100" width="375" height="503"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="EIK-9a-Xzr" secondAttribute="trailing" id="5gH-6i-Avt"/>
+                            <constraint firstItem="PC8-cA-XJI" firstAttribute="top" secondItem="PWu-jK-Dg3" secondAttribute="bottom" id="B9w-uR-EdB"/>
+                            <constraint firstItem="EIK-9a-Xzr" firstAttribute="leading" secondItem="MQZ-5h-kmB" secondAttribute="leading" id="D4b-FU-xHz"/>
+                            <constraint firstItem="PC8-cA-XJI" firstAttribute="leading" secondItem="MQZ-5h-kmB" secondAttribute="leading" id="Di1-n9-X8Z"/>
+                            <constraint firstAttribute="trailing" secondItem="PC8-cA-XJI" secondAttribute="trailing" id="ILl-qg-C7w"/>
+                            <constraint firstItem="ZD0-8f-Jtk" firstAttribute="top" secondItem="EIK-9a-Xzr" secondAttribute="bottom" id="u1Z-wW-kZK"/>
+                            <constraint firstItem="EIK-9a-Xzr" firstAttribute="top" secondItem="PC8-cA-XJI" secondAttribute="bottom" id="x0X-JU-eHs"/>
+                        </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2y0-fg-5hs" userLabel="First Responder" sceneMemberID="firstResponder"/>

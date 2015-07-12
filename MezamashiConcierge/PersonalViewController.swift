@@ -13,7 +13,8 @@ class PersonalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        title = "Personal"
+        view.backgroundColor = UIColor.mainColor()
     }
 
     override func didReceiveMemoryWarning() {
