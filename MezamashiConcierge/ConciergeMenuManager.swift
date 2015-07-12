@@ -33,7 +33,7 @@ class ConciergeMenuManager: ManagerModel {
             "title": "Personal",
             "enSubTitle": "edit personal information",
             "jaSubTitle": "個人情報の編集",
-            "segue": "pushAreaViewController"])
+            "segue": "pushPersonalViewController"])
         
         return [menu1, menu2, menu3]
     }
