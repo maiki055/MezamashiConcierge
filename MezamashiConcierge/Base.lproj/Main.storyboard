@@ -156,7 +156,7 @@
                                     <constraint firstAttribute="height" constant="100" id="zga-le-08I"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="message" value="使用する路線のエリアを選んでください"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="message" value="使用する路線のエリアを選んでください。"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
@@ -193,10 +193,38 @@
                     <view key="view" contentMode="scaleToFill" id="WrU-wn-xg8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TWx-BK-hxV" customClass="HeaderMessageView" customModule="MezamashiConcierge" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="9ih-oU-SBK"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="message" value="貴方の習慣を教えてください。"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="I4i-LM-ulo">
+                                <rect key="frame" x="0.0" y="100" width="375" height="503"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="I4i-LM-ulo" secondAttribute="trailing" id="5aR-1B-PXG"/>
+                            <constraint firstItem="I4i-LM-ulo" firstAttribute="leading" secondItem="WrU-wn-xg8" secondAttribute="leading" id="7k1-BP-dit"/>
+                            <constraint firstItem="TWx-BK-hxV" firstAttribute="leading" secondItem="WrU-wn-xg8" secondAttribute="leading" id="GzG-lC-ZF7"/>
+                            <constraint firstItem="I4i-LM-ulo" firstAttribute="top" secondItem="TWx-BK-hxV" secondAttribute="bottom" id="Wxe-XB-AtA"/>
+                            <constraint firstAttribute="trailing" secondItem="TWx-BK-hxV" secondAttribute="trailing" id="a3d-ai-lVP"/>
+                            <constraint firstItem="Kgv-Pm-kIR" firstAttribute="top" secondItem="I4i-LM-ulo" secondAttribute="bottom" id="j4k-8V-3jn"/>
+                            <constraint firstItem="TWx-BK-hxV" firstAttribute="top" secondItem="Gl3-R3-crv" secondAttribute="bottom" id="meg-fr-Zpv"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="I4i-LM-ulo" id="tdg-Ju-KAu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oBi-PG-YHO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -221,7 +249,7 @@
                                     <constraint firstAttribute="height" constant="100" id="oAn-ip-QVN"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="message" value="利用する路線を選んでください"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="message" value="利用する路線を選んでください。"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Hl1-Yx-ARd" customClass="RouteTableView" customModule="MezamashiConcierge" customModuleProvider="target">
