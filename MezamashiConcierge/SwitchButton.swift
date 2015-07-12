@@ -8,10 +8,14 @@
 
 import UIKit
 
+@objc protocol SwitchButtonDelegate {
+    optional func switchButton(switchButton: SwitchButton, shouldSelectButton button: UIButton) -> Bool
+}
+
 class SwitchButton: UIView {
-    let activeColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.9)
+    let activeColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.8)
     let inActiveColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.4)
-    var selected = false {
+    dynamic var selected = false {
         didSet {
             activeLamp.hidden = !selected
             if selected {
@@ -25,6 +29,7 @@ class SwitchButton: UIView {
     let button = UIButton()
     let textLabel = UILabel()
     let activeLamp = UIView()
+    weak var delegate: SwitchButtonDelegate?
     
     convenience init() {
         self.init(frame: CGRectZero)
@@ -52,7 +57,7 @@ class SwitchButton: UIView {
         activeLamp.layer.cornerRadius = 2
 
         textLabel.frame = CGRectMake(viewMaxX(button) + 10, 0, viewWidth(self) - viewMaxX(button) - 10, viewHeight(self))
-        textLabel.font = UIFont.font(12)
+        textLabel.font = UIFont.font(11)
         
         self.addSubview(activeLamp)
         self.addSubview(button)
@@ -61,6 +66,8 @@ class SwitchButton: UIView {
     }
     
     func didSelectButton(sender: UIButton) {
-        selected = !selected
+        if (delegate?.switchButton?(self, shouldSelectButton: sender) != nil && delegate?.switchButton?(self, shouldSelectButton: sender) == true) {
+            selected = !selected
+        }
     }
 }

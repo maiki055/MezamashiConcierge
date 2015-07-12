@@ -57,6 +57,7 @@
 		32D4FBCD1B50392B0025A9FB /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D4FBCC1B50392B0025A9FB /* CustomViewController.swift */; };
 		32D4FBD11B503EB70025A9FB /* CustomTableViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D4FBD01B503EB70025A9FB /* CustomTableViewSection.swift */; };
 		32D4FBD31B5048280025A9FB /* SwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D4FBD21B5048280025A9FB /* SwitchButton.swift */; };
+		32D4FBD51B50ABD50025A9FB /* SwitchButtonCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D4FBD41B50ABD50025A9FB /* SwitchButtonCollection.swift */; };
 		32D96E4D1B4ECAE20077C5DA /* AreaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D96E4C1B4ECAE20077C5DA /* AreaManager.swift */; };
 		32D96E4F1B4ECAF40077C5DA /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D96E4E1B4ECAF40077C5DA /* Area.swift */; };
 		32D96E531B4ECC960077C5DA /* RailroadCompany.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D96E521B4ECC960077C5DA /* RailroadCompany.swift */; };
@@ -139,6 +140,7 @@
 		32D4FBCC1B50392B0025A9FB /* CustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		32D4FBD01B503EB70025A9FB /* CustomTableViewSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewSection.swift; sourceTree = "<group>"; };
 		32D4FBD21B5048280025A9FB /* SwitchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchButton.swift; sourceTree = "<group>"; };
+		32D4FBD41B50ABD50025A9FB /* SwitchButtonCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchButtonCollection.swift; sourceTree = "<group>"; };
 		32D96E4C1B4ECAE20077C5DA /* AreaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaManager.swift; sourceTree = "<group>"; };
 		32D96E4E1B4ECAF40077C5DA /* Area.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
 		32D96E521B4ECC960077C5DA /* RailroadCompany.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailroadCompany.swift; sourceTree = "<group>"; };
@@ -329,6 +331,7 @@
 				32D96E6A1B4F71400077C5DA /* RouteTableView.swift */,
 				32D4FBD01B503EB70025A9FB /* CustomTableViewSection.swift */,
 				32D4FBD21B5048280025A9FB /* SwitchButton.swift */,
+				32D4FBD41B50ABD50025A9FB /* SwitchButtonCollection.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 			files = (
 				3216E5641B4103B900CE6927 /* ButtonsWrapperView.swift in Sources */,
 				3216E5571B3DC9B200CE6927 /* MCReachability.swift in Sources */,
+				32D4FBD51B50ABD50025A9FB /* SwitchButtonCollection.swift in Sources */,
 				32858D131B390B4C007723A7 /* Model.swift in Sources */,
 				3216E5621B4033B600CE6927 /* MovingPoint.swift in Sources */,
 				32D96E5D1B4ED08E0077C5DA /* CommonTableView.swift in Sources */,
