@@ -12,12 +12,6 @@ class SwitchButtonCollection: UIView, SwitchButtonDelegate {
     var index = 0
     var switchButtons = [SwitchButton]()
     
-    deinit {
-        for switchButton in switchButtons {
-            switchButton.removeObserver(self, forKeyPath: "selected")
-        }
-    }
-    
     func createButtons(titles: Array<String>) {
         let height = viewHeight(self)
         let width = viewWidth(self) / CGFloat(titles.count)
@@ -26,15 +20,10 @@ class SwitchButtonCollection: UIView, SwitchButtonDelegate {
             switchButton.tag = index
             switchButton.delegate = self
             switchButton.textLabel.text = title
-            switchButton.addObserver(self, forKeyPath: "selected", options: .New, context: nil)
             self.addSubview(switchButton)
             switchButtons.append(switchButton)
         }
         switchButtons[0].selected = true
-    }
-    
-    override func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject : AnyObject], context: UnsafeMutablePointer<Void>) {
-        println(object)
     }
     
     // MARK: SwitchButtonDelegate
