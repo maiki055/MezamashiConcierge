@@ -39,3 +39,7 @@ func viewMinX(view: UIView) -> CGFloat {
 func viewMinY(view: UIView) -> CGFloat {
     return CGRectGetMinY(view.frame)
 }
+
+func viewCenter(view: UIView) -> CGPoint {
+    return CGPoint(x: viewWidth(view) / 2, y: viewHeight(view) / 2)
+}
