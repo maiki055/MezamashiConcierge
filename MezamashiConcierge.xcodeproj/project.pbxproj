@@ -59,7 +59,8 @@
 		32D4FBD31B5048280025A9FB /* SwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D4FBD21B5048280025A9FB /* SwitchButton.swift */; };
 		32D4FBD51B50ABD50025A9FB /* SwitchButtonCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D4FBD41B50ABD50025A9FB /* SwitchButtonCollection.swift */; };
 		32D4FBD91B52AF640025A9FB /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D4FBD81B52AF640025A9FB /* PersonalViewController.swift */; };
-		32D4FBDB1B52B3360025A9FB /* PersonTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D4FBDA1B52B3360025A9FB /* PersonTableView.swift */; };
+		32D4FBDE1B52B5270025A9FB /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D4FBDC1B52B5270025A9FB /* PersonTableViewCell.swift */; };
+		32D4FBDF1B52B5270025A9FB /* PersonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D4FBDD1B52B5270025A9FB /* PersonTableViewCell.xib */; };
 		32D96E4D1B4ECAE20077C5DA /* AreaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D96E4C1B4ECAE20077C5DA /* AreaManager.swift */; };
 		32D96E4F1B4ECAF40077C5DA /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D96E4E1B4ECAF40077C5DA /* Area.swift */; };
 		32D96E531B4ECC960077C5DA /* RailroadCompany.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D96E521B4ECC960077C5DA /* RailroadCompany.swift */; };
@@ -144,7 +145,8 @@
 		32D4FBD21B5048280025A9FB /* SwitchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchButton.swift; sourceTree = "<group>"; };
 		32D4FBD41B50ABD50025A9FB /* SwitchButtonCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchButtonCollection.swift; sourceTree = "<group>"; };
 		32D4FBD81B52AF640025A9FB /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
-		32D4FBDA1B52B3360025A9FB /* PersonTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTableView.swift; sourceTree = "<group>"; };
+		32D4FBDC1B52B5270025A9FB /* PersonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
+		32D4FBDD1B52B5270025A9FB /* PersonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonTableViewCell.xib; sourceTree = "<group>"; };
 		32D96E4C1B4ECAE20077C5DA /* AreaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaManager.swift; sourceTree = "<group>"; };
 		32D96E4E1B4ECAF40077C5DA /* Area.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
 		32D96E521B4ECC960077C5DA /* RailroadCompany.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailroadCompany.swift; sourceTree = "<group>"; };
@@ -337,7 +339,8 @@
 				32D4FBD01B503EB70025A9FB /* CustomTableViewSection.swift */,
 				32D4FBD21B5048280025A9FB /* SwitchButton.swift */,
 				32D4FBD41B50ABD50025A9FB /* SwitchButtonCollection.swift */,
-				32D4FBDA1B52B3360025A9FB /* PersonTableView.swift */,
+				32D4FBDC1B52B5270025A9FB /* PersonTableViewCell.swift */,
+				32D4FBDD1B52B5270025A9FB /* PersonTableViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 			files = (
 				32D96E611B4ED0AF0077C5DA /* CommonTableViewCell.xib in Resources */,
 				3216E55C1B3E642500CE6927 /* alarm.m4r in Resources */,
+				32D4FBDF1B52B5270025A9FB /* PersonTableViewCell.xib in Resources */,
 				322C41991B3D406800734FA5 /* MenuTableViewCell.xib in Resources */,
 				3216E5661B4103C900CE6927 /* ButtonsWrapperView.xib in Resources */,
 				32858D2F1B3BA302007723A7 /* MessageView.xib in Resources */,
@@ -589,7 +593,7 @@
 				32858D1D1B3914EC007723A7 /* UIFont+Extension.swift in Sources */,
 				322C419D1B3D6C3D00734FA5 /* ConciergeMenuManager.swift in Sources */,
 				32858D2D1B3AC8DC007723A7 /* MessageView.swift in Sources */,
-				32D4FBDB1B52B3360025A9FB /* PersonTableView.swift in Sources */,
+				32D4FBDE1B52B5270025A9FB /* PersonTableViewCell.swift in Sources */,
 				32858D1B1B390C86007723A7 /* AlarmManager.swift in Sources */,
 				32858D381B3C8004007723A7 /* Devise.swift in Sources */,
 				32D96E4F1B4ECAF40077C5DA /* Area.swift in Sources */,

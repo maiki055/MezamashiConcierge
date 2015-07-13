@@ -56,7 +56,7 @@ class SwitchButton: UIView {
         activeLamp.backgroundColor = activeColor
         activeLamp.layer.cornerRadius = 2
 
-        textLabel.frame = CGRectMake(viewMaxX(button) + 10, 0, viewWidth(self) - viewMaxX(button) - 10, viewHeight(self))
+        textLabel.frame = CGRectMake(viewMaxX(button) + 5, 0, viewWidth(self) - viewMaxX(button) - 5, viewHeight(self))
         textLabel.font = UIFont.font(11)
         
         self.addSubview(activeLamp)
