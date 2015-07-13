@@ -50,7 +50,14 @@ class ConciergeViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let segue = menus[indexPath.row].segue
-        self.performSegueWithIdentifier(segue, sender: self)
+        if segue != "" {
+            self.performSegueWithIdentifier(segue, sender: self)
+        }
+        else {
+            let alert = UIAlertController(title: "近日公開", message: "この機能は近日公開される機能です。アップデートをお待ち下さい", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
     }
 
 }

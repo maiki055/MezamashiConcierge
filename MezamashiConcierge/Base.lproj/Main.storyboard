@@ -125,9 +125,9 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="tableView" destination="QWU-S9-Umt" id="Mjl-HA-bbe"/>
-                        <segue destination="Jar-wl-OAc" kind="show" identifier="pushAreaViewController" id="Arb-c9-CvX"/>
+                        <segue destination="Jar-wl-OAc" kind="show" identifier="pushAreaOfRouteViewController" id="Arb-c9-CvX"/>
                         <segue destination="Ufg-8i-oTt" kind="show" identifier="pushCustomViewController" id="ycJ-Rf-SOF"/>
-                        <segue destination="FPm-CU-7aq" kind="show" identifier="pushPersonalViewController" id="rP4-xr-DAf"/>
+                        <segue destination="Jar-wl-OAc" kind="show" identifier="pushAreaOfResidenceViewController" id="FMM-o0-QMN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DcU-Ac-Dvk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -231,54 +231,6 @@
             </objects>
             <point key="canvasLocation" x="1860.5" y="1102.5"/>
         </scene>
-        <!--Personal View Controller-->
-        <scene sceneID="ihU-JO-DkZ">
-            <objects>
-                <viewController id="FPm-CU-7aq" customClass="PersonalViewController" customModule="MezamashiConcierge" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="PWu-jK-Dg3"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZD0-8f-Jtk"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="MQZ-5h-kmB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PC8-cA-XJI" customClass="HeaderMessageView" customModule="MezamashiConcierge" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="inJ-fW-eKq"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="message" value="貴方について詳細な情報を教えてください。"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="EIK-9a-Xzr">
-                                <rect key="frame" x="0.0" y="100" width="375" height="503"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="EIK-9a-Xzr" secondAttribute="trailing" id="5gH-6i-Avt"/>
-                            <constraint firstItem="PC8-cA-XJI" firstAttribute="top" secondItem="PWu-jK-Dg3" secondAttribute="bottom" id="B9w-uR-EdB"/>
-                            <constraint firstItem="EIK-9a-Xzr" firstAttribute="leading" secondItem="MQZ-5h-kmB" secondAttribute="leading" id="D4b-FU-xHz"/>
-                            <constraint firstItem="PC8-cA-XJI" firstAttribute="leading" secondItem="MQZ-5h-kmB" secondAttribute="leading" id="Di1-n9-X8Z"/>
-                            <constraint firstAttribute="trailing" secondItem="PC8-cA-XJI" secondAttribute="trailing" id="ILl-qg-C7w"/>
-                            <constraint firstItem="ZD0-8f-Jtk" firstAttribute="top" secondItem="EIK-9a-Xzr" secondAttribute="bottom" id="u1Z-wW-kZK"/>
-                            <constraint firstItem="EIK-9a-Xzr" firstAttribute="top" secondItem="PC8-cA-XJI" secondAttribute="bottom" id="x0X-JU-eHs"/>
-                        </constraints>
-                    </view>
-                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="tableView" destination="EIK-9a-Xzr" id="qfb-Iy-Mam"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2y0-fg-5hs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1860.5" y="1906.5"/>
-        </scene>
         <!--Route View Controller-->
         <scene sceneID="Bo4-Hn-SkM">
             <objects>
@@ -347,4 +299,7 @@
             <point key="canvasLocation" x="858.5" y="288.5"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="FMM-o0-QMN"/>
+    </inferredMetricsTieBreakers>
 </document>
