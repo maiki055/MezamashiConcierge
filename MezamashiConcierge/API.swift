@@ -12,7 +12,7 @@ import SwiftyJSON
 import MRProgress
 
 class API: NSObject {
-    static let DomainURL = "http://localhost:4000/"
+    static let DomainURL = "http://shinbo-no-MacBook-Pro.local:4000/"
     static let Version = "v1"
     
     class func baseURL() -> String {
