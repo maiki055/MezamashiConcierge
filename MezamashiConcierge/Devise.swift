@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum deviseHeights: CGFloat {
+enum DeviseHeights: CGFloat {
     case Inch3_5 = 480
     case Inch4   = 568
     case Inch4_7 = 667
@@ -20,7 +20,7 @@ struct Devise {
     static let screenWidth  = UIScreen.mainScreen().bounds.size.width
     static let screenHeight = UIScreen.mainScreen().bounds.size.height
     
-    static func isSize(height: deviseHeights) -> Bool {
+    static func isSize(height: DeviseHeights) -> Bool {
         return screenHeight == height.rawValue
     }
     
