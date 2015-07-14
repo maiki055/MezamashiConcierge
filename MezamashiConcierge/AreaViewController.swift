@@ -8,10 +8,25 @@
 
 import UIKit
 
+enum AreaType {
+    case AreaTypeRoute
+    case AreaTypeResidence
+    
+    func segue() -> String {
+        switch self {
+        case .AreaTypeRoute:
+            return "pushRouteViewController"
+        case .AreaTypeResidence:
+            return "pushResidenceViewController"
+        }
+    }
+}
+
 class AreaViewController: UIViewController, CommomTableViewDelegate {
     @IBOutlet weak var tableView: CommonTableView!
     var areas = AreaManager.sharedManager.areas
     var area: Area!
+    var type: AreaType!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,11 +49,13 @@ class AreaViewController: UIViewController, CommomTableViewDelegate {
     // MARK: CommomTableViewDelegate
     func commonTableView(commonTableView: CommonTableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         area = areas[indexPath.row]
-        self.performSegueWithIdentifier("pushRouteViewController", sender: nil)
+        self.performSegueWithIdentifier(type.segue(), sender: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let routeViewController = segue.destinationViewController as! RouteViewController
-        routeViewController.area = area
+        if segue.identifier == "pushRouteViewController" {
+            let routeViewController = segue.destinationViewController as! RouteViewController
+            routeViewController.area = area
+        }
     }
 }

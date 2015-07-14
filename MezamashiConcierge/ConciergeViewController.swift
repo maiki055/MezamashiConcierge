@@ -59,5 +59,15 @@ class ConciergeViewController: UIViewController, UITableViewDataSource, UITableV
             self.presentViewController(alert, animated: true, completion: nil)
         }
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let areaViewController = segue.destinationViewController as! AreaViewController
+        if segue.identifier == "pushAreaOfRouteViewController" {
+            areaViewController.type = .AreaTypeRoute
+        }
+        else if segue.identifier == "pushAreaOfResidenceViewController" {
+            areaViewController.type = .AreaTypeResidence
+        }
+    }
 
 }
