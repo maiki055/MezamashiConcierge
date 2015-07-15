@@ -8,6 +8,12 @@
 
 import UIKit
 
+@objc protocol MovingPointDelegate {
+    optional func movingPoint(movingPoint: MovingPoint, touchesBegan touches: Set<NSObject>, withEvent event: UIEvent)
+    optional func movingPoint(movingPoint: MovingPoint, touchesMoved touches: Set<NSObject>, withEvent event: UIEvent)
+    optional func movingPoint(movingPoint: MovingPoint, touchesEnded touches: Set<NSObject>, withEvent event: UIEvent)
+}
+
 enum AlarmComponents {
     case Hour
     case Min
@@ -31,6 +37,7 @@ class MovingPoint: UIView {
             time = componentType.calcTime(radian)
         }
     }
+    weak var delegate: MovingPointDelegate?
 
     func setSize(size: CGSize) {
         self.frame.size = size
@@ -45,5 +52,17 @@ class MovingPoint: UIView {
             }
         }
         return false
+    }
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        delegate?.movingPoint?(self, touchesBegan: touches, withEvent: event)
+    }
+
+    override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
+        delegate?.movingPoint?(self, touchesMoved: touches, withEvent: event)
+    }
+    
+    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+        delegate?.movingPoint?(self, touchesEnded: touches, withEvent: event)
     }
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AlarmView: ClockView {
+class AlarmView: ClockView, MovingPointDelegate {
     let alarm = Alarm()
     var lowerDate: NSDate!
     var upperDate: NSDate!
@@ -28,12 +28,14 @@ class AlarmView: ClockView {
         hourMovingPoint.setSize(CGSize(width: self.hourLineWidth * 1.5, height: self.hourLineWidth * 1.5))
         hourMovingPoint.center = CGPoint(x: viewWidth(self) / 2, y: viewHeight(self) / 2 - hourMovingPoint.constantRadius)
         hourMovingPoint.backgroundColor = self.color
+        hourMovingPoint.delegate = self
         
         minMovingPoint.componentType = .Min
         minMovingPoint.constantRadius = minRadius
         minMovingPoint.setSize(CGSize(width: self.minuteLineWidth * 1.5, height: self.minuteLineWidth * 1.5))
         minMovingPoint.center = CGPoint(x: viewWidth(self) / 2, y: viewHeight(self) / 2 - minMovingPoint.constantRadius)
         minMovingPoint.backgroundColor = self.color
+        minMovingPoint.delegate = self
         
         self.addSubview(hourMovingPoint)
         self.addSubview(minMovingPoint)
@@ -45,7 +47,7 @@ class AlarmView: ClockView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func prepareDate() {
+    private func prepareDate() {
         date = NSDate()
         lowerDate = date
         upperDate = NSDate(timeIntervalSinceNow: 24*60*60)
@@ -66,36 +68,38 @@ class AlarmView: ClockView {
         super.drawRect(rect)
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    func movingPoint(movingPoint: MovingPoint, touchesMoved touches: Set<NSObject>, withEvent event: UIEvent) {
         let relativePoints = getTouchRelativePoint(touches)
-        if (minMovingPoint.hasTouchedInside(pointX: relativePoints.0, pointY: relativePoints.1)) {
-            movePoint = minMovingPoint
-        }
-        else {
-            movePoint = hourMovingPoint
-        }
-    }
-    
-    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
-        movePoint = nil
-    }
-    
-    override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
-        if let unwrappedMovePoint = movePoint {
-            let relativePoints = getTouchRelativePoint(touches)
-            unwrappedMovePoint.radian = atan2(-Double(relativePoints.0), -Double(relativePoints.1)) + M_PI
-            justifyCenter(unwrappedMovePoint)
+        movingPoint.radian = atan2(-Double(relativePoints.0), -Double(relativePoints.1)) + M_PI
             
-            switch movePoint.componentType {
-            case .Hour:
-                hour = movePoint.time
-            case .Min:
-                min = movePoint.time
+        switch movingPoint.componentType {
+        case .Hour:
+            let newHour = movingPoint.time
+            if newHour == 0 && hour == 23 {
+                dating = NSDate(timeInterval: 24*60*60, sinceDate: dating)
             }
-            alarm.date = calendar.dateBySettingHour(hour, minute: min, second: 0, ofDate: dating, options: nil)!
-            self.date = alarm.date
-            self.setNeedsDisplay()
+            else if hour == 0 && newHour == 23 {
+                dating = NSDate(timeInterval: -24*60*60, sinceDate: dating)
+            }
+            hour = movingPoint.time
+        case .Min:
+            min = movingPoint.time
         }
+        let schedulingDate = calendar.dateBySettingHour(hour, minute: min, second: 0, ofDate: dating, options: nil)!
+        alarm.date = schedulingDate
+        self.date = alarm.date
+        justifyCenter(movingPoint)
+        self.setNeedsDisplay()
+    }
+    
+    private func isValidAlarmDate(schedulingDate: NSDate) -> Bool {
+        if lowerDate.compare(schedulingDate) == .OrderedDescending {
+            return false
+        }
+        else if upperDate.compare(schedulingDate) == .OrderedAscending {
+            return false
+        }
+        return true
     }
     
     private func justifyCenter(movePoint: MovingPoint) {
