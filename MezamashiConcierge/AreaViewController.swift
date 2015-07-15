@@ -20,19 +20,30 @@ enum AreaType {
             return "pushResidenceViewController"
         }
     }
+    
+    func message() -> String {
+        switch self {
+        case .AreaTypeRoute:
+            return "使用する路線のエリアを選んでください。"
+        case .AreaTypeResidence:
+            return "居住地のエリアを選んでください。"
+        }
+    }
 }
 
 class AreaViewController: UIViewController, CommomTableViewDelegate {
     @IBOutlet weak var tableView: CommonTableView!
+    @IBOutlet weak var messageView: HeaderMessageView!
     var areas = AreaManager.sharedManager.areas
     var area: Area!
     var type: AreaType!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "Area"
         view.backgroundColor = UIColor.mainColor()
+        messageView.message = type.message()
         tableView.customDelegate = self
         for area in areas {
             tableView.dataArray.append(area.name)
