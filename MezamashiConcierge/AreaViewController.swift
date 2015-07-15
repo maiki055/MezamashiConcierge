@@ -68,5 +68,9 @@ class AreaViewController: UIViewController, CommomTableViewDelegate {
             let routeViewController = segue.destinationViewController as! RouteViewController
             routeViewController.area = area
         }
+        else if segue.identifier == "pushResidenceViewController" {
+            let residenceViewController = segue.destinationViewController as! ResidenceViewController
+            residenceViewController.area = area
+        }
     }
 }

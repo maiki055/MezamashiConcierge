@@ -233,10 +233,10 @@
             </objects>
             <point key="canvasLocation" x="1860.5" y="1102.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Residence View Controller-->
         <scene sceneID="iqI-ES-sRI">
             <objects>
-                <viewController id="0fH-Pd-2et" sceneMemberID="viewController">
+                <viewController id="0fH-Pd-2et" customClass="ResidenceViewController" customModule="MezamashiConcierge" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="A55-4o-7yK"/>
                         <viewControllerLayoutGuide type="bottom" id="eSd-f8-jt4"/>
