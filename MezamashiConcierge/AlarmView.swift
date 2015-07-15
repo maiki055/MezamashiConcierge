@@ -10,6 +10,8 @@ import UIKit
 
 class AlarmView: ClockView {
     let alarm = Alarm()
+    var lowerDate: NSDate!
+    var upperDate: NSDate!
     let hourMovingPoint = MovingPoint()
     let minMovingPoint = MovingPoint()
     var movePoint: MovingPoint!
@@ -18,7 +20,7 @@ class AlarmView: ClockView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+    
         hourMovingPoint.componentType = .Hour
         hourMovingPoint.constantRadius = hourRadius
         hourMovingPoint.setSize(CGSize(width: self.hourLineWidth * 1.5, height: self.hourLineWidth * 1.5))
@@ -33,10 +35,25 @@ class AlarmView: ClockView {
         
         self.addSubview(hourMovingPoint)
         self.addSubview(minMovingPoint)
+        
+        prepareDate()
     }
 
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func prepareDate() {
+        date = NSDate()
+        lowerDate = date
+        upperDate = NSDate(timeIntervalSinceNow: 24*60*60)
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components(NSCalendarUnit.CalendarUnitHour | NSCalendarUnit.CalendarUnitMinute, fromDate: date)
+        
+        hourMovingPoint.radian = Double(components.hour) / 24 * 2 * M_PI
+        justifyCenter(hourMovingPoint)
+        minMovingPoint.radian = Double(components.minute) / 60 * 2 * M_PI
+        justifyCenter(minMovingPoint)
     }
 
     override func drawRect(rect: CGRect) {
@@ -61,9 +78,7 @@ class AlarmView: ClockView {
         if let unwrappedMovePoint = movePoint {
             let relativePoints = getTouchRelativePoint(touches)
             unwrappedMovePoint.radian = atan2(-Double(relativePoints.0), -Double(relativePoints.1)) + M_PI
-            let x = Double(unwrappedMovePoint.constantRadius) * sin(unwrappedMovePoint.radian)
-            let y = -Double(unwrappedMovePoint.constantRadius) * cos(unwrappedMovePoint.radian)
-            unwrappedMovePoint.center = CGPoint(x: CGFloat(x) + viewWidth(self) / 2, y: CGFloat(y) + viewHeight(self) / 2)
+            justifyCenter(unwrappedMovePoint)
             
             switch movePoint.componentType {
             case .Hour:
@@ -72,9 +87,16 @@ class AlarmView: ClockView {
                 min = movePoint.time
             }
             let dateString = String(format: "%02d:%02d", hour, min)
-            self.date = self.dateFormatterHour.dateFromString(dateString)!
+            alarm.date = self.dateFormatterHour.dateFromString(dateString)!
+            self.date = alarm.date
             self.setNeedsDisplay()
         }
+    }
+    
+    private func justifyCenter(movePoint: MovingPoint) {
+        let x = Double(movePoint.constantRadius) * sin(movePoint.radian)
+        let y = -Double(movePoint.constantRadius) * cos(movePoint.radian)
+        movePoint.center = CGPoint(x: CGFloat(x) + viewWidth(self) / 2, y: CGFloat(y) + viewHeight(self) / 2)
     }
     
     private func getTouchRelativePoint(touches: Set<NSObject>) -> (relativeTouchX: CGFloat, relativeTouchY: CGFloat) {
