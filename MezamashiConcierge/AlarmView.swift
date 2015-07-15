@@ -15,8 +15,10 @@ class AlarmView: ClockView {
     let hourMovingPoint = MovingPoint()
     let minMovingPoint = MovingPoint()
     var movePoint: MovingPoint!
+    var dating: NSDate!
     var hour = 0
-    var min = 0
+    var min  = 0
+    let calendar = NSCalendar.currentCalendar()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -47,13 +49,17 @@ class AlarmView: ClockView {
         date = NSDate()
         lowerDate = date
         upperDate = NSDate(timeIntervalSinceNow: 24*60*60)
-        let calendar = NSCalendar.currentCalendar()
-        let components = calendar.components(NSCalendarUnit.CalendarUnitHour | NSCalendarUnit.CalendarUnitMinute, fromDate: date)
         
-        hourMovingPoint.radian = Double(components.hour) / 24 * 2 * M_PI
+        let components = calendar.components(NSCalendarUnit.CalendarUnitYear | NSCalendarUnit.CalendarUnitMonth | NSCalendarUnit.CalendarUnitDay | NSCalendarUnit.CalendarUnitHour | NSCalendarUnit.CalendarUnitMinute, fromDate: date)
+        hour = components.hour
+        min  = components.minute
+        hourMovingPoint.radian = Double(hour) / 24 * 2 * M_PI
         justifyCenter(hourMovingPoint)
-        minMovingPoint.radian = Double(components.minute) / 60 * 2 * M_PI
+        minMovingPoint.radian = Double(min) / 60 * 2 * M_PI
         justifyCenter(minMovingPoint)
+        
+        let dateString = String(format: "%04d/%02d/%02d", components.year, components.month, components.day)
+        dating = dateFormatterEra.dateFromString(dateString)!
     }
 
     override func drawRect(rect: CGRect) {
@@ -86,8 +92,7 @@ class AlarmView: ClockView {
             case .Min:
                 min = movePoint.time
             }
-            let dateString = String(format: "%02d:%02d", hour, min)
-            alarm.date = self.dateFormatterHour.dateFromString(dateString)!
+            alarm.date = calendar.dateBySettingHour(hour, minute: min, second: 0, ofDate: dating, options: nil)!
             self.date = alarm.date
             self.setNeedsDisplay()
         }
