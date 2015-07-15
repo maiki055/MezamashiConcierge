@@ -80,6 +80,13 @@ class SettingAlarmViewController: UIViewController, ButtonsWrapperViewDelegate {
     
     // MARK: ButtonsWrapperViewDelegate
     func buttonsWrapperView(buttonsWrapperView: ButtonsWrapperView, didSelectLeftButton: UIButton) {
+        if !alarm.isValid() {
+            let alertController = UIAlertController(title: "無効な時刻", message: "設定しようとした時間は無効な値です。", preferredStyle: .Alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            alertController.addAction(defaultAction)
+            self.presentViewController(alertController, animated: true, completion: nil)
+            return
+        }
         let alertController = UIAlertController(title: "設定の完了", message: "アラームを\(alarm.alarmMessage())に設定いたしました", preferredStyle: .Alert)
         let defaultAction = UIAlertAction(title: "OK", style: .Default) { (alertAction) -> Void in
             self.dismissViewControllerAnimated(true, completion: nil)

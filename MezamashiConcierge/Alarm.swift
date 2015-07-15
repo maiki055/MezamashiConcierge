@@ -41,4 +41,8 @@ class Alarm: Model {
         formatter.dateFormat = "MM月dd日のHH時mm分"
         return formatter.stringFromDate(date)
     }
+    
+    func isValid() -> Bool {
+        return NSDate().compare(date) == .OrderedAscending
+    }
 }
