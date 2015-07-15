@@ -54,5 +54,10 @@ class User: Model {
             print(json)
         }, failure: nil, always: nil)
     }
-
+    
+    func patchUserCity(city_id: Int) {
+        API.request(Alamofire.Method.PATCH, route: "users/city", parameters: ["city_id": city_id], needAuth: true, success: { (json) -> Void in
+            print(json)
+            }, failure: nil, always: nil)
+    }
 }

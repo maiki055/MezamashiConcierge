@@ -242,11 +242,44 @@
                         <viewControllerLayoutGuide type="bottom" id="eSd-f8-jt4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="y6q-Q2-I5b">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="alp-va-q7C" customClass="HeaderMessageView" customModule="MezamashiConcierge" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="S8I-Zs-d4s"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="message">
+                                        <string key="value" base64-UTF8="YES">
+5bGF5L2PCOWcsOOCkumBuOaKnuOBl+OBpuOBj+OBoOOBleOBhOOAgg
+</string>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Gty-Wv-Lnd" customClass="ResidenceTableView" customModule="MezamashiConcierge" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="100" width="375" height="503"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="alp-va-q7C" firstAttribute="top" secondItem="A55-4o-7yK" secondAttribute="bottom" id="2NM-rr-WPw"/>
+                            <constraint firstItem="Gty-Wv-Lnd" firstAttribute="leading" secondItem="y6q-Q2-I5b" secondAttribute="leading" id="6iJ-TZ-8yc"/>
+                            <constraint firstItem="eSd-f8-jt4" firstAttribute="top" secondItem="Gty-Wv-Lnd" secondAttribute="bottom" id="MZ5-90-Jy8"/>
+                            <constraint firstItem="alp-va-q7C" firstAttribute="leading" secondItem="y6q-Q2-I5b" secondAttribute="leading" id="SCA-yv-P6Z"/>
+                            <constraint firstItem="Gty-Wv-Lnd" firstAttribute="top" secondItem="alp-va-q7C" secondAttribute="bottom" id="ZvC-rA-4sh"/>
+                            <constraint firstAttribute="trailing" secondItem="alp-va-q7C" secondAttribute="trailing" id="bHh-kg-91C"/>
+                            <constraint firstAttribute="trailing" secondItem="Gty-Wv-Lnd" secondAttribute="trailing" id="g75-4L-aHF"/>
+                        </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="Gty-Wv-Lnd" id="Ufb-H3-ECF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RPd-Ut-36R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

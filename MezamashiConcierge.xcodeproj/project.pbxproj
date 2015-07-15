@@ -62,6 +62,7 @@
 		32D4FBDE1B52B5270025A9FB /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D4FBDC1B52B5270025A9FB /* PersonTableViewCell.swift */; };
 		32D4FBDF1B52B5270025A9FB /* PersonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D4FBDD1B52B5270025A9FB /* PersonTableViewCell.xib */; };
 		32D4FBE11B5612240025A9FB /* ResidenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D4FBE01B5612240025A9FB /* ResidenceViewController.swift */; };
+		32D4FBE31B561B190025A9FB /* ResidenceTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D4FBE21B561B190025A9FB /* ResidenceTableView.swift */; };
 		32D96E4D1B4ECAE20077C5DA /* AreaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D96E4C1B4ECAE20077C5DA /* AreaManager.swift */; };
 		32D96E4F1B4ECAF40077C5DA /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D96E4E1B4ECAF40077C5DA /* Area.swift */; };
 		32D96E531B4ECC960077C5DA /* RailroadCompany.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D96E521B4ECC960077C5DA /* RailroadCompany.swift */; };
@@ -149,6 +150,7 @@
 		32D4FBDC1B52B5270025A9FB /* PersonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		32D4FBDD1B52B5270025A9FB /* PersonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonTableViewCell.xib; sourceTree = "<group>"; };
 		32D4FBE01B5612240025A9FB /* ResidenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResidenceViewController.swift; sourceTree = "<group>"; };
+		32D4FBE21B561B190025A9FB /* ResidenceTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResidenceTableView.swift; sourceTree = "<group>"; };
 		32D96E4C1B4ECAE20077C5DA /* AreaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaManager.swift; sourceTree = "<group>"; };
 		32D96E4E1B4ECAF40077C5DA /* Area.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
 		32D96E521B4ECC960077C5DA /* RailroadCompany.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailroadCompany.swift; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 				32D96E661B4F66A20077C5DA /* HeaderMessageView.swift */,
 				32D96E681B4F66B80077C5DA /* HeaderMessageView.xib */,
 				32D96E6A1B4F71400077C5DA /* RouteTableView.swift */,
+				32D4FBE21B561B190025A9FB /* ResidenceTableView.swift */,
 				32D4FBD01B503EB70025A9FB /* CustomTableViewSection.swift */,
 				32D4FBD21B5048280025A9FB /* SwitchButton.swift */,
 				32D4FBD41B50ABD50025A9FB /* SwitchButtonCollection.swift */,
@@ -588,6 +591,7 @@
 				32D4FBCB1B5033340025A9FB /* City.swift in Sources */,
 				32858D171B390BEA007723A7 /* Alarm.swift in Sources */,
 				32858D221B391608007723A7 /* AlarmView.swift in Sources */,
+				32D4FBE31B561B190025A9FB /* ResidenceTableView.swift in Sources */,
 				32858D401B3D2833007723A7 /* NavigationController.swift in Sources */,
 				32D4FBE11B5612240025A9FB /* ResidenceViewController.swift in Sources */,
 				32D4FBC71B4FDD220025A9FB /* API.swift in Sources */,
