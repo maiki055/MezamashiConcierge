@@ -9,19 +9,24 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import AVFoundation
 
 class Alarm: Model {
     var date = NSDate()
     var fileName = "alarm"
     var fileType = "m4r"
     var isOn = false
+    var alarmPlayer: AVAudioPlayer!
+    var alarmTimer: NSTimer?
     
     func on() {
         isOn = true
+        alarmTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "alarmTimerEvent", userInfo: nil, repeats: true)
     }
     
     func off() {
         isOn = false
+        alarmTimer?.invalidate()
     }
     
     func updateAlarm() {
@@ -44,5 +49,35 @@ class Alarm: Model {
     
     func isValid() -> Bool {
         return NSDate().compare(date) == .OrderedAscending
+    }
+    
+    func startAlarm() {
+        off()
+        println("start!!!")
+        if let path = NSBundle.mainBundle().pathForResource("alarm", ofType: "m4r") {
+            let fileURL = NSURL(fileURLWithPath: path)
+            var error:NSError?
+            alarmPlayer = AVAudioPlayer(contentsOfURL: fileURL, error: &error)
+            if let unwrappedError = error {
+                println("Error \(unwrappedError.localizedDescription)")
+            }
+            else {
+                alarmPlayer.prepareToPlay()
+                alarmPlayer.play()
+            }
+        }
+    }
+    
+    func stopAlarm() {
+        alarmPlayer.stop()
+        alarmTimer?.invalidate()
+    }
+    
+    func alarmTimerEvent() {
+        println(date)
+        println(NSDate())
+        if NSDate().compare(date) == .OrderedDescending {
+            startAlarm()
+        }
     }
 }

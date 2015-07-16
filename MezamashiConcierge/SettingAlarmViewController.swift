@@ -92,7 +92,7 @@ class SettingAlarmViewController: UIViewController, ButtonsWrapperViewDelegate {
         }
         alertController.addAction(defaultAction)
         self.presentViewController(alertController, animated: true, completion: nil)
-        AlarmManager.sharedManager.setAlarm(Alarm())
+        AlarmManager.sharedManager.setAlarm(alarmView.alarm)
     }
     
     func buttonsWrapperView(buttonsWrapperView: ButtonsWrapperView, didSelectRightButton: UIButton) {

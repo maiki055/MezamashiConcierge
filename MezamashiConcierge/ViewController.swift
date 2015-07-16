@@ -7,12 +7,10 @@
 //
 
 import UIKit
-import AVFoundation
 
 class ViewController: UIViewController, CallConciergeViewDelegate, MessageViewDelegate {
     var clockView: ClockView!
     var messageView: MessageView!
-    var alarmPlayer: AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,25 +55,6 @@ class ViewController: UIViewController, CallConciergeViewDelegate, MessageViewDe
     }
     
     func endSetAlerm() {
-    }
-    
-    func startAlarm() {
-        if let path = NSBundle.mainBundle().pathForResource("alarm", ofType: "m4r") {
-            let fileURL = NSURL(fileURLWithPath: path)
-            var error:NSError?
-            alarmPlayer = AVAudioPlayer(contentsOfURL: fileURL, error: &error)
-            if let unwrappedError = error {
-                println("Error \(unwrappedError.localizedDescription)")
-            }
-            else {
-                alarmPlayer.prepareToPlay()
-                alarmPlayer.play()
-            }
-        }
-    }
-    
-    func stopAlarm() {
-        alarmPlayer.stop()
     }
     
     func allocateRects() -> (alarmWidth: CGFloat, alarmHeight: CGFloat, innerMargin: CGFloat) {

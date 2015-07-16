@@ -17,10 +17,14 @@ class AlarmManager: NSObject {
     func setAlarm(alarm: Alarm) {
         isOn = true
         activeAlarm = alarm
+        activeAlarm?.on()
+        UIApplication.sharedApplication().idleTimerDisabled = true
     }
     
     func removeAlarm() {
+        activeAlarm?.off()
         activeAlarm = nil
         isOn = false
+        UIApplication.sharedApplication().idleTimerDisabled = false
     }
 }
